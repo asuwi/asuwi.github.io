@@ -1,41 +1,40 @@
+import type { ReactNode } from 'react'
 import type { Stat } from '../data/site.ts'
 import { cn } from './cn.ts'
 
 interface StatCardProps {
   stat: Stat
-  accent?: boolean
+  icon?: ReactNode
   tone?: 'default' | 'green'
 }
 
-function StatCard({ stat, accent, tone = 'default' }: StatCardProps) {
+function StatCard({ stat, icon, tone = 'default' }: StatCardProps) {
   const green = tone === 'green'
 
   return (
-    <div
-      className={cn(
-        'flex flex-col justify-between rounded-[var(--radius-card)] p-6',
-        green
-          ? accent
-            ? 'bg-surface text-accent-deep'
-            : 'bg-white/10 text-surface'
-          : accent
-            ? 'bg-accent text-surface'
-            : 'bg-accent-soft text-text',
-      )}
-    >
-      <span className="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-black leading-none tracking-[-0.02em]">
+    <div className="flex flex-col gap-3 px-6 py-4 md:px-10">
+      {icon ? (
+        <span
+          className={cn(
+            'flex h-8 w-8 items-center justify-center',
+            green ? 'text-surface/60' : 'text-accent',
+          )}
+        >
+          {icon}
+        </span>
+      ) : null}
+      <span
+        className={cn(
+          'font-display text-[clamp(3.25rem,8vw,7rem)] font-black leading-[0.85] tracking-[-0.03em]',
+          green ? 'text-surface' : 'text-accent-deep',
+        )}
+      >
         {stat.value}
       </span>
       <span
         className={cn(
-          'mt-4 text-sm font-medium',
-          green
-            ? accent
-              ? 'text-accent-deep/70'
-              : 'text-surface/70'
-            : accent
-              ? 'text-surface/80'
-              : 'text-muted',
+          'font-script text-2xl leading-none md:text-3xl',
+          green ? 'text-surface/85' : 'text-accent',
         )}
       >
         {stat.label}

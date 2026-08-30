@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import character1 from '../assets/character1.png'
 import portrait from '../assets/portrait.png'
 import Container from '../components/Container.tsx'
 import ProjectSection from '../components/ProjectSection.tsx'
@@ -24,6 +25,13 @@ const expertise = [
   'Réseaux sociaux',
   'Direction artistique',
   'Vidéo & animation',
+]
+
+const statIcons = [
+  <Sparkle key="sparkle" className="h-6 w-6 animate-twinkle" />,
+  <Asterisk key="asterisk" className="h-7 w-7 animate-spin-slow" />,
+  <Flower key="flower" className="h-6 w-6 animate-float" />,
+  <Squiggle key="squiggle" className="h-4 w-20 animate-breathe" />,
 ]
 
 function Home() {
@@ -88,9 +96,9 @@ function Home() {
         <Container>
           <div className="grid gap-10 md:grid-cols-3 md:items-start">
             <img
-              src={portrait}
+              src={character1}
               alt={`Portrait de ${site.name}`}
-              className="w-full max-w-xs rounded-[var(--radius-card)] border border-surface/20"
+              className="w-full max-w-xs mix-blend-multiply"
             />
             <div>
               <h2 className="font-display text-[clamp(1.5rem,3vw,2.25rem)] font-extrabold uppercase tracking-[-0.02em] text-surface">
@@ -128,13 +136,12 @@ function Home() {
       <Section>
         <Container>
           <SectionHeader title="En quelques chiffres" />
-          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4 lg:divide-x lg:divide-border">
             {site.stats.map((stat, index) => (
               <StatCard
                 key={stat.label}
                 stat={stat}
-                accent={index === 1 || index === 2}
-
+                icon={statIcons[index]}
               />
             ))}
           </div>
