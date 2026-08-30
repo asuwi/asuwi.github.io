@@ -1,0 +1,20 @@
+{
+  "title": "Hors Ondes",
+  "category": "perso",
+  "kind": "Édition",
+  "tags": ["Éditorial", "Mise en page", "Typographie", "Retouche photo"],
+  "description": [
+    "Dans le cadre d'un projet de cours, j'ai conçu Hors Ondes, un magazine consacré à la nouvelle scène du rap français.",
+    "Ce projet m'a permis de travailler la mise en page, le design éditorial, la retouche photographique ainsi que la typographie. J'ai notamment développé la hiérarchisation des contenus, le rythme des compositions et l'adaptation des images en fonction de leur disposition.",
+    "Passionnée par le graphisme éditorial, cette réalisation m'a permis d'approfondir mes compétences tout en explorant un univers visuel qui me correspond."
+  ],
+  "cover": "Mockup Couv + dos.png",
+  "images": [
+    { "src": "Mockup Couv + dos.png", "caption": "Couverture et dos" },
+    { "src": "EDITO.png", "caption": "L'édito" },
+    { "src": "agenda mockup.png", "caption": "L'agenda" },
+    { "src": "mockup focus.png", "caption": "Le focus" },
+    { "src": "wallace interv.png", "caption": "Interview de Wallace" },
+    { "src": "theodora.png", "caption": "Theodora" }
+  ]
+}
