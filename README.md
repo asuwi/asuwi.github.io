@@ -1,4 +1,36 @@
-# React + TypeScript + Vite
+# Portfolio
+
+Portfolio de Manon Arteta, construit avec React + TypeScript + Vite + Tailwind CSS.
+
+## Ajouter un projet
+
+Chaque projet est un dossier dans `src/projets/<slug>/` contenant :
+
+- un fichier `manifest.json` qui décrit le projet ;
+- toutes les images du projet (`.jpg`, `.png`, `.webp`, …).
+
+```jsonc
+{
+  "title": "Nom du projet",
+  "category": "pro",              // "pro" | "perso"
+  "client": "Nom du client",       // optionnel
+  "kind": "Type de projet",
+  "tags": ["Identité visuelle", "Logo"],
+  "description": ["Paragraphe 1", "Paragraphe 2"],
+  "order": 1,                      // optionnel : ordre d'affichage
+  "cover": "02-palette.jpg",       // optionnel : image de couverture (sinon 1re image)
+  "images": [                      // optionnel : sinon auto-détection triée par nom de fichier
+    { "src": "01-logo.jpg", "caption": "Le logo final" },
+    { "src": "02-palette.jpg" }
+  ]
+}
+```
+
+Le nom du dossier devient l'URL du projet (`/projets/<slug>`). Il suffit de déposer le dossier et ses images : la page est générée automatiquement au build.
+
+---
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 

@@ -1,3 +1,5 @@
+import { projects } from './projects'
+
 export interface SocialLink {
   label: string
   href: string
@@ -25,7 +27,7 @@ export interface Stat {
 export interface Testimonial {
   quote: string
   name: string
-  role: string
+    role: string
 }
 
 const site = {
@@ -73,7 +75,7 @@ const site = {
   ] as Service[],
   stats: [
     { value: '2+', label: 'années d’alternance' },
-    { value: '9', label: 'projets réalisés' },
+    { value: String(projects.length), label: 'projets réalisés' },
     { value: '6', label: 'domaines créatifs' },
     { value: '100%', label: 'curieuse & réactive' },
   ] as Stat[],

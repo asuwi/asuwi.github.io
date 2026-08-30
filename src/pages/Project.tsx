@@ -1,6 +1,6 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import Container from '../components/Container.tsx'
-import Cover from '../components/Cover.tsx'
+import ProjectGallery from '../components/ProjectGallery.tsx'
 import TagList from '../components/TagList.tsx'
 import { categoryMeta, getProject, projects } from '../data/projects.ts'
 
@@ -38,19 +38,8 @@ function Project() {
           </p>
         </header>
 
-        <div className="mb-12 overflow-hidden rounded-[var(--radius-card)] border border-border bg-surface">
-          <Cover
-            slug={project.slug}
-            alt={project.title}
-            className="w-full"
-            fallback={
-              <div className="flex aspect-[16/7] items-center justify-center bg-[linear-gradient(135deg,var(--color-surface),var(--color-accent-soft))] p-8">
-                <span className="text-center font-display text-[clamp(2rem,6vw,5rem)] font-black uppercase tracking-[-0.02em] text-accent opacity-50">
-                  {project.title}
-                </span>
-              </div>
-            }
-          />
+        <div className="mb-12">
+          <ProjectGallery images={project.images} title={project.title} />
         </div>
 
         <div className="mb-10 flex max-w-[65ch] flex-col gap-5">

@@ -16,7 +16,7 @@ function ProjectCard({ project, index, tone = 'default' }: ProjectCardProps) {
     <Link to={`/projets/${project.slug}`} className="group flex flex-col gap-4">
       <div className="relative aspect-square overflow-hidden rounded-[var(--radius-card)] border border-border bg-surface">
         <Cover
-          slug={project.slug}
+          src={project.cover}
           alt={project.title}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
           fallback={

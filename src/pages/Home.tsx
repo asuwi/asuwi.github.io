@@ -36,7 +36,7 @@ const statIcons = [
 
 function Home() {
   const pro = getProjects('pro')
-  const fictif = getProjects('fictif')
+  const perso = getProjects('perso')
 
   return (
     <>
@@ -97,15 +97,15 @@ function Home() {
           <div className="relative grid gap-12 md:grid-cols-3 md:items-start">
             <div className="relative mx-auto w-full max-w-sm">
               <Blob className="absolute -inset-5 -z-10 animate-breathe bg-surface/15" />
-              <Sparkle className="absolute -top-3 -left-2 h-7 w-7 animate-twinkle text-surface" />
-              <Flower className="absolute -bottom-4 right-0 h-8 w-8 animate-float text-surface" />
+              <Sparkle className="absolute -top-4 -left-4 h-8 w-8 animate-twinkle text-surface" />
+              <Flower className="absolute -bottom-4 -right-4 h-8 w-8 animate-float text-surface" />
               <img
                 src={character1}
                 alt={`Illustration de ${site.name}`}
-                className="w-full"
+                className="w-full rounded-[var(--radius-card)] border border-white/30"
               />
             </div>
-            <div className="relative md:-ml-10 lg:-ml-32">
+            <div className="relative md:-ml-6 lg:-ml-20">
               <Asterisk className="absolute -top-2 right-56 h-9 w-9 animate-spin-slow text-surface/60" />
               <h2 className="font-display text-[clamp(1.5rem,3vw,2.25rem)] font-extrabold uppercase tracking-[-0.02em] text-surface">
                 Bonjour, je suis
@@ -115,7 +115,7 @@ function Home() {
                 </span>
               </h2>
               <Squiggle className="mt-3 text-surface/60" />
-              <p className="mt-5 text-base leading-relaxed text-surface/80">
+              <p className="mt-5 max-w-md text-base leading-relaxed text-surface/80">
                 J’accompagne les marques dans leur développement avec un design
                 stratégique, des visuels affirmés et des expériences qui
                 marquent les esprits. Le design, c’est avant tout ce que votre
@@ -161,10 +161,10 @@ function Home() {
       />
 
       <ProjectSection
-        title={categoryMeta.fictif.label}
-        intro={categoryMeta.fictif.intro}
-        moreLink={categoryMeta.fictif.path}
-        projects={fictif}
+        title={categoryMeta.perso.label}
+        intro={categoryMeta.perso.intro}
+        moreLink={categoryMeta.perso.path}
+        projects={perso}
       />
 
       <Section tone="green">

@@ -14,7 +14,7 @@ function App() {
           path="projets-professionnels"
           element={<Projets category="pro" />}
         />
-        <Route path="projets-fictifs" element={<Projets category="fictif" />} />
+        <Route path="projets-perso" element={<Projets category="perso" />} />
         <Route path="projets/:slug" element={<Project />} />
         <Route path="a-propos" element={<About />} />
         <Route path="*" element={<Navigate to="/" replace />} />
