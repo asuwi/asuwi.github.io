@@ -98,25 +98,23 @@ function Home() {
             <img
               src={character1}
               alt={`Portrait de ${site.name}`}
-              className="w-full max-w-xs mix-blend-multiply"
+              className="w-full max-w-sm"
             />
-            <div>
+            <div className="md:-ml-10 lg:-ml-36">
               <h2 className="font-display text-[clamp(1.5rem,3vw,2.25rem)] font-extrabold uppercase tracking-[-0.02em] text-surface">
-                Salut, c’est
-                <span className="block font-script font-semibold normal-case tracking-normal text-surface">
+                Bonjour, je suis
+                <p className="mt-6 flex items-center gap-2 font-script text-3xl text-surface normal-case">
                   Manon
-                </span>
+                  <span className="text-surface/80">♡</span>
+                </p>
+                <Squiggle className="mt-2 text-surface/70" />
               </h2>
               <p className="mt-4 text-base leading-relaxed text-surface/80">
-                J’aide les marques à se démarquer avec un design stratégique,
-                des visuels qui ont du caractère et des expériences mémorables.
-                Le design, c’est avant tout ce que votre marque fait ressentir.
+                J’accompagne les marques dans leur développement avec un design
+                stratégique, des visuels affirmés et des expériences qui
+                marquent les esprits. Le design, c’est avant tout ce que votre
+                marque fait ressentir.
               </p>
-              <p className="mt-6 flex items-center gap-2 font-script text-3xl text-surface">
-                Manon
-                <span className="text-surface/80">♡</span>
-              </p>
-              <Squiggle className="mt-2 text-surface/70" />
             </div>
             <ul className="flex flex-col divide-y divide-surface/20 border-t border-surface/20">
               {expertise.map((item) => (
@@ -155,7 +153,7 @@ function Home() {
         projects={pro}
         tone='green'
       />
-      
+
       <ProjectSection
         title={categoryMeta.fictif.label}
         intro={categoryMeta.fictif.intro}
