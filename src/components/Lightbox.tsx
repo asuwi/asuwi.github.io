@@ -49,7 +49,7 @@ function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) {
         type="button"
         onClick={onClose}
         aria-label="Fermer"
-        className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-surface/10 text-xl text-surface transition-colors hover:bg-surface/20"
+        className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-surface/10 text-xl text-surface transition-colors hover:bg-surface/20 cursor-pointer"
       >
         ✕
       </button>
@@ -62,7 +62,7 @@ function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) {
             goPrev()
           }}
           aria-label="Image précédente"
-          className="absolute left-3 flex h-12 w-12 items-center justify-center rounded-full bg-surface/10 text-2xl text-surface transition-colors hover:bg-surface/20 md:left-6"
+          className="absolute left-3 flex h-12 w-12 items-center justify-center rounded-full bg-surface/10 text-2xl text-surface transition-colors hover:bg-surface/20 md:left-6 cursor-pointer"
         >
           ←
         </button>
@@ -76,7 +76,7 @@ function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) {
             goNext()
           }}
           aria-label="Image suivante"
-          className="absolute right-3 flex h-12 w-12 items-center justify-center rounded-full bg-surface/10 text-2xl text-surface transition-colors hover:bg-surface/20 md:right-6"
+          className="absolute right-3 flex h-12 w-12 items-center justify-center rounded-full bg-surface/10 text-2xl text-surface transition-colors hover:bg-surface/20 md:right-6 cursor-pointer"
         >
           →
         </button>

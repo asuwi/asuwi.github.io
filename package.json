@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "bun run images:optimize && vite",
+    "build": "bun run images:optimize && tsc -b && vite build",
+    "images:optimize": "bun scripts/optimize-images.ts",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "bun run build && git add docs && git commit -m \"deploy\" && git push"

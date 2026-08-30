@@ -1,6 +1,6 @@
 import Container from '../components/Container.tsx'
 import PageHeading from '../components/PageHeading.tsx'
-import portrait from '../assets/portrait.png'
+import { optimizedAsset } from '../data/optimizedImages.ts'
 
 const paragraphs = [
   "Je suis Manon Arteta, graphiste diplômée d'une licence en design graphique et actuellement à la recherche d'une alternance pour mon Master Direction Artistique Communication 360 à LISAA Paris.",
@@ -20,6 +20,8 @@ const skills = [
 ]
 
 function About() {
+  const portraitSrc = optimizedAsset('portrait')
+
   return (
     <section className="min-h-[55vh]">
       <Container className="py-12 md:py-24">
@@ -34,11 +36,13 @@ function About() {
             ))}
           </div>
 
-          <img
-            src={portrait}
-            alt="Portrait de Manon Arteta"
-            className="w-64 rounded-[var(--radius-card)] border border-border md:w-80"
-          />
+          {portraitSrc ? (
+            <img
+              src={portraitSrc}
+              alt="Portrait de Manon Arteta"
+              className="w-64 rounded-[var(--radius-card)] border border-border md:w-80"
+            />
+          ) : null}
         </div>
 
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">

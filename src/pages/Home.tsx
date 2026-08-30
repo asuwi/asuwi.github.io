@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom'
-import character1 from '../assets/character1.png'
-import portrait from '../assets/portrait.png'
 import Container from '../components/Container.tsx'
 import ProjectSection from '../components/ProjectSection.tsx'
 import Section from '../components/Section.tsx'
@@ -16,6 +14,7 @@ import {
   Squiggle,
 } from '../components/Decorative.tsx'
 import { categoryMeta, getProjects } from '../data/projects.ts'
+import { optimizedAsset } from '../data/optimizedImages.ts'
 import site from '../data/site.ts'
 
 const expertise = [
@@ -37,6 +36,8 @@ const statIcons = [
 function Home() {
   const pro = getProjects('pro')
   const perso = getProjects('perso')
+  const portraitSrc = optimizedAsset('portrait')
+  const characterSrc = optimizedAsset('character1')
 
   return (
     <>
@@ -82,11 +83,13 @@ function Home() {
               <Sparkle className="absolute -top-4 -right-2 h-8 w-8 animate-twinkle text-accent" />
               <Asterisk className="absolute -bottom-4 -left-4 h-10 w-10 animate-spin-slow text-accent-deep" />
               <Flower className="absolute top-1/2 -right-7 h-8 w-8 animate-float text-accent" />
-              <img
-                src={portrait}
-                alt={`Portrait de ${site.name}`}
-                className="w-full rounded-[var(--radius-card)] border border-border"
-              />
+              {portraitSrc ? (
+                <img
+                  src={portraitSrc}
+                  alt={`Portrait de ${site.name}`}
+                  className="w-full rounded-[var(--radius-card)] border border-border"
+                />
+              ) : null}
             </div>
           </div>
         </Container>
@@ -99,11 +102,13 @@ function Home() {
               <Blob className="absolute -inset-5 -z-10 animate-breathe bg-surface/15" />
               <Sparkle className="absolute -top-4 -left-4 h-8 w-8 animate-twinkle text-surface" />
               <Flower className="absolute -bottom-4 -right-4 h-8 w-8 animate-float text-surface" />
-              <img
-                src={character1}
-                alt={`Illustration de ${site.name}`}
-                className="w-full rounded-[var(--radius-card)] border border-white/30"
-              />
+              {characterSrc ? (
+                <img
+                  src={characterSrc}
+                  alt={`Illustration de ${site.name}`}
+                  className="w-full rounded-[var(--radius-card)] border border-white/30"
+                />
+              ) : null}
             </div>
             <div className="relative md:-ml-6 lg:-ml-20">
               <Asterisk className="absolute -top-2 right-56 h-9 w-9 animate-spin-slow text-surface/60" />

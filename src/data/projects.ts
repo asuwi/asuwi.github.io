@@ -1,3 +1,5 @@
+import { optimizedKeys, optimizedUrl } from './optimizedImages.ts'
+
 export type Category = 'pro' | 'perso'
 
 export interface ProjectImage {
@@ -39,10 +41,7 @@ const manifests = import.meta.glob<ProjectManifest>(
   { eager: true, import: 'default' },
 )
 
-const images = import.meta.glob<string>(
-  '../projects/*/*.{jpg,jpeg,png,webp,avif,gif}',
-  { eager: true, import: 'default' },
-)
+const images = optimizedKeys()
 
 interface Folder {
   slug: string
@@ -53,18 +52,28 @@ interface Folder {
 const folders: Folder[] = Object.keys(manifests).map((path) => {
   const slug = path.split('/')[2]
   const manifest = manifests[path]
-  const folderPrefix = `../projects/${slug}/`
+  const folderPrefix = `../generated/projects/${slug}/`
   const folderImages = new Map<string, string>()
 
-  for (const [imagePath, url] of Object.entries(images)) {
+  for (const imagePath of images) {
     if (imagePath.startsWith(folderPrefix)) {
       const filename = imagePath.slice(folderPrefix.length)
-      folderImages.set(filename, url)
+      const url = optimizedUrl(imagePath)
+      if (url) folderImages.set(filename, url)
     }
   }
 
   return { slug, manifest, images: folderImages }
 })
+
+function basename(filename: string): string {
+  const dot = filename.lastIndexOf('.')
+  return dot === -1 ? filename : filename.slice(0, dot)
+}
+
+function resolveSrc(folder: Folder, filename: string): string {
+  return folder.images.get(basename(filename)) ?? ''
+}
 
 function resolveImages(
   folder: Folder,
@@ -74,13 +83,13 @@ function resolveImages(
   if (manifestImages && manifestImages.length > 0) {
     const images = manifestImages
       .map((image) => {
-        const src = folder.images.get(image.src)
+        const src = resolveSrc(folder, image.src)
         if (!src) return undefined
         return { src, caption: image.caption } as ProjectImage
       })
       .filter((image): image is ProjectImage => image !== undefined)
 
-    const coverSrc = cover ? folder.images.get(cover) : images[0]?.src
+    const coverSrc = cover ? resolveSrc(folder, cover) : images[0]?.src
     return { images, cover: coverSrc ?? '' }
   }
 
@@ -91,7 +100,7 @@ function resolveImages(
     src: folder.images.get(filename) as string,
   }))
 
-  const coverSrc = cover ? folder.images.get(cover) : resolved[0]?.src
+  const coverSrc = cover ? resolveSrc(folder, cover) : resolved[0]?.src
   return { images: resolved, cover: coverSrc ?? '' }
 }
 
