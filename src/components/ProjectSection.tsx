@@ -9,6 +9,7 @@ interface ProjectSectionProps {
   intro?: string
   moreLink?: string
   projects: Project[]
+  tone?: 'default' | 'green'
 }
 
 function ProjectSection({
@@ -16,12 +17,18 @@ function ProjectSection({
   intro,
   moreLink,
   projects,
+  tone = 'default',
 }: ProjectSectionProps) {
   return (
-    <Section>
+    <Section tone={tone}>
       <Container>
-        <SectionHeader title={title} intro={intro} moreLink={moreLink} />
-        <ProjectGrid projects={projects} />
+        <SectionHeader
+          title={title}
+          intro={intro}
+          moreLink={moreLink}
+          tone={tone}
+        />
+        <ProjectGrid projects={projects} tone={tone} />
       </Container>
     </Section>
   )

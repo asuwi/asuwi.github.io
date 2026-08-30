@@ -3,6 +3,7 @@ import site from '../data/site.ts'
 import { cn } from './cn.ts'
 import Container from './Container.tsx'
 import ScrollToTop from './ScrollToTop.tsx'
+import { Sparkle } from './Decorative.tsx'
 
 const navLinks = [
   { to: '/', label: 'Accueil', end: true },
@@ -21,9 +22,10 @@ function Layout() {
         <Container className="flex items-center justify-between gap-4 py-4">
           <NavLink
             to="/"
-            className="whitespace-nowrap font-display text-lg font-extrabold uppercase tracking-[-0.02em]"
+            className="flex items-center gap-2 whitespace-nowrap font-display text-lg font-extrabold uppercase tracking-[-0.02em] text-accent-deep"
           >
             {site.name}
+            <Sparkle className="h-4 w-4 text-accent" />
           </NavLink>
           <nav className="flex items-center gap-4 md:gap-6">
             {navLinks.map((link) => (
@@ -42,6 +44,12 @@ function Layout() {
                 {link.label}
               </NavLink>
             ))}
+            <a
+              href={site.emailHref}
+              className="hidden whitespace-nowrap rounded-full bg-accent px-5 py-2 text-[13px] font-semibold uppercase tracking-wide text-surface transition-colors hover:bg-accent-deep md:inline-block"
+            >
+              Travaillons ensemble
+            </a>
           </nav>
         </Container>
       </header>
@@ -50,33 +58,39 @@ function Layout() {
         <Outlet />
       </main>
 
-      <footer className="border-t border-border bg-surface">
-        <Container className="py-12 md:py-24">
-          <section className="flex flex-col items-start gap-3">
-            <h2 className="mb-2 font-display text-[clamp(2rem,5vw,3.5rem)] font-extrabold uppercase tracking-[-0.02em]">
-              Contact
+      <footer className="relative overflow-hidden border-t border-border bg-accent-deep text-surface">
+        <Container className="relative py-16 md:py-24">
+          <section className="flex max-w-[30ch] flex-col items-start gap-3">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-soft">
+              Envie de collaborer ?
+            </p>
+            <h2 className="font-display text-[clamp(2rem,6vw,3.5rem)] font-black uppercase leading-[0.95] tracking-[-0.02em]">
+              Travaillons
+              <span className="block font-script font-semibold normal-case tracking-normal">
+                ensemble !
+              </span>
             </h2>
             <a
               href={site.emailHref}
-              className="border-b-2 border-accent font-display text-[clamp(1.25rem,3vw,2rem)] font-bold transition-colors hover:text-accent"
+              className="mt-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-surface transition-colors hover:bg-surface hover:text-accent-deep"
             >
-              {site.email}
+              Me contacter →
             </a>
-            <div className="mt-2 flex flex-wrap gap-5">
+            <div className="mt-6 flex flex-wrap gap-5">
               {site.socials.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="border-b border-border text-[15px] text-muted transition-colors hover:border-accent hover:text-text"
+                  className="border-b border-surface/40 text-[15px] text-surface/80 transition-colors hover:border-surface hover:text-surface"
                 >
                   {social.label}
                 </a>
               ))}
             </div>
           </section>
-          <p className="mt-12 text-[13px] text-muted">
+          <p className="mt-12 text-[13px] text-surface/60">
             © {year} {site.name}
           </p>
         </Container>

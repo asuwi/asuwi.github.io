@@ -29,7 +29,7 @@ function Project() {
           >
             ← {meta.label}
           </Link>
-          <h1 className="font-display text-[clamp(2.5rem,8vw,6rem)] font-black uppercase leading-[0.95] tracking-[-0.03em]">
+          <h1 className="font-display text-[clamp(2rem,6vw,4rem)] font-black uppercase leading-[0.95] tracking-[-0.03em] text-accent-deep">
             {project.title}
           </h1>
           <p className="text-[15px] uppercase tracking-wide text-muted">
@@ -38,7 +38,7 @@ function Project() {
           </p>
         </header>
 
-        <div className="mb-12 border border-border bg-surface">
+        <div className="mb-12 overflow-hidden rounded-[var(--radius-card)] border border-border bg-surface">
           <Cover
             slug={project.slug}
             alt={project.title}
@@ -55,7 +55,7 @@ function Project() {
 
         <div className="mb-10 flex max-w-[65ch] flex-col gap-5">
           {project.description.map((paragraph) => (
-            <p key={paragraph.slice(0, 24)} className="text-lg leading-[1.7]">
+            <p key={paragraph.slice(0, 24)} className="text-base leading-[1.6]">
               {paragraph}
             </p>
           ))}

@@ -28,7 +28,7 @@ function About() {
         <div className="mb-12 grid gap-10 md:grid-cols-[1fr_auto] md:items-start">
           <div className="flex max-w-[65ch] flex-col gap-5">
             {paragraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 24)} className="text-lg leading-[1.7]">
+              <p key={paragraph.slice(0, 24)} className="text-base leading-[1.6]">
                 {paragraph}
               </p>
             ))}
@@ -37,7 +37,7 @@ function About() {
           <img
             src={portrait}
             alt="Portrait de Manon Arteta"
-            className="w-64 rounded-2xl border border-border md:w-80"
+            className="w-64 rounded-[var(--radius-card)] border border-border md:w-80"
           />
         </div>
 
@@ -61,7 +61,7 @@ function About() {
           ))}
         </div>
 
-        <p className="max-w-[65ch] border-l-[3px] border-accent pl-6 text-lg leading-[1.7]">
+        <p className="max-w-[65ch] border-l-[3px] border-accent pl-6 text-base leading-[1.6]">
           Curieuse, réactive et toujours intéressée par de nouveaux projets, je
           souhaite aujourd'hui continuer à développer mes compétences en
           direction artistique et explorer davantage le digital, la vidéo,

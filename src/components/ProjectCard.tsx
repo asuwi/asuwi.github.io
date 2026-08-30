@@ -1,18 +1,20 @@
 import { Link } from 'react-router-dom'
 import type { Project } from '../data/projects.ts'
+import { cn } from './cn.ts'
 import Cover from './Cover.tsx'
 
 interface ProjectCardProps {
   project: Project
   index: number
+  tone?: 'default' | 'green'
 }
 
-function ProjectCard({ project, index }: ProjectCardProps) {
+function ProjectCard({ project, index, tone = 'default' }: ProjectCardProps) {
   const number = String(index + 1).padStart(2, '0')
 
   return (
-    <Link to={`/projets/${project.slug}`} className="group flex flex-col gap-3">
-      <div className="relative aspect-square overflow-hidden border border-border bg-surface">
+    <Link to={`/projets/${project.slug}`} className="group flex flex-col gap-4">
+      <div className="relative aspect-square overflow-hidden rounded-[var(--radius-card)] border border-border bg-surface">
         <Cover
           slug={project.slug}
           alt={project.title}
@@ -25,15 +27,32 @@ function ProjectCard({ project, index }: ProjectCardProps) {
             </div>
           }
         />
+        <span className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-surface text-lg text-accent-deep shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:rotate-45 group-hover:text-accent">
+          ↗
+        </span>
       </div>
       <div className="flex flex-col gap-1">
+        <p
+          className={cn(
+            'text-[13px] font-semibold uppercase tracking-wide',
+            tone === 'green' ? 'text-surface/80' : 'text-accent',
+          )}
+        >
+          {project.kind}
+        </p>
         <h3 className="font-display text-xl font-bold uppercase tracking-[-0.01em]">
           {project.title}
         </h3>
-        <p className="text-[13px] uppercase tracking-wide text-muted">
-          {project.client ? `${project.client} — ` : ''}
-          {project.kind}
-        </p>
+        {project.client ? (
+          <p
+            className={cn(
+              'text-[13px] uppercase tracking-wide',
+              tone === 'green' ? 'text-surface/60' : 'text-muted',
+            )}
+          >
+            {project.client}
+          </p>
+        ) : null}
       </div>
     </Link>
   )
