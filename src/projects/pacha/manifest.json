@@ -12,5 +12,17 @@
     "L'identité visuelle de Pacha repose principalement sur une approche éditoriale. Les compositions jouent avec la hiérarchie des informations, le rythme des mises en page et l'association entre textes et illustrations. Une typographie expressive, épaisse et impactante est utilisée pour capter immédiatement le regard, donner du caractère à la marque et créer une identité facilement reconnaissable.",
     "Cet univers graphique mêle une esthétique rétro et actuelle, accompagnée de couleurs vintage choisies pour créer une ambiance chaleureuse et mémorable. L'illustration occupe également une place centrale dans les supports de communication. Son aspect fait main permet d'humaniser la marque, de rassurer les futurs adoptants et de transmettre les valeurs de douceur, de proximité et de bienveillance portées par Pacha.",
     "À travers cette identité soignée et sensible, Pacha souhaite montrer que l'attention portée à la marque reflète également celle accordée au bien-être des chats."
+  ],
+  "images": [
+    { "src": "1 logo pacha.jpg", "caption": "Le logo" },
+    { "src": "Affiche A3 pacha.png", "caption": "Affiche A3" },
+    { "src": "Carte de fidelite.png", "caption": "Carte de fidélité" },
+    { "src": "livret.jpg", "caption": "Le livret" },
+    { "src": "menu mockup.png", "caption": "Le menu" },
+    { "src": "Porte menu pfe.jpg", "caption": "Le porte-menu" },
+    { "src": "mock up croquette et gamelle.png", "caption": "Gamelle et croquettes" },
+    { "src": "Sac a emporter MOCKUP.png", "caption": "Le sac à emporter" },
+    { "src": "set de table pfe-10.png", "caption": "Le set de table" },
+    { "src": "Tote bag Pacha.png", "caption": "Le tote bag" }
   ]
 }

@@ -89,7 +89,7 @@ function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) {
         <img
           src={image?.src}
           alt={image?.caption ?? ''}
-          className="max-h-[80vh] w-auto max-w-full rounded-[var(--radius-card)] border border-surface/20 object-contain"
+          className="max-h-[80vh] w-auto max-w-full rounded-[var(--radius-card)] border border-surface/20 bg-bg object-contain"
         />
         {image?.caption ? (
           <figcaption className="text-center text-sm text-surface/90">
