@@ -1,19 +1,25 @@
-import { Link, Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import Layout from './components/Layout.tsx'
 import About from './pages/About.tsx'
 import Home from './pages/Home.tsx'
+import Project from './pages/Project.tsx'
+import Projets from './pages/Projets.tsx'
 
 function App() {
   return (
-    <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route
+          path="projets-professionnels"
+          element={<Projets category="pro" />}
+        />
+        <Route path="projets-fictifs" element={<Projets category="fictif" />} />
+        <Route path="projets/:slug" element={<Project />} />
+        <Route path="a-propos" element={<About />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
+    </Routes>
   )
 }
 
