@@ -44,6 +44,19 @@
     L’objectif était de rendre l’information accessible au plus grand nombre, quels que soient l’âge ou les éventuelles difficultés de lecture. J’ai donc privilégié un langage visuel simple et direct, fondé sur l’illustration, afin de faciliter la compréhension du message et de renforcer l’impact de la campagne.Le travail typographique repose également sur la mise en valeur de certains mots-clés grâce au soulignement, permettant une lecture rapide et une meilleure hiérarchisation de l’information.
     Cette campagne se décline à travers une affiche institutionnelle inspirée des communications du ministère de la Santé, ainsi qu’une publication destinée aux réseaux sociaux, notamment Instagram.
 
+    - COEUR SUR LA PATTE :
+    le travail c'était de faire un livret, choix sur le sujet, choisi de faire un livret sur l'association que j'ai créé : Coeur sur la patte. Ce livret qui explique ce qu'est ce projet, qui est pour un evenement (imaginaire lié au projet) : une rencontre dans l'observatoire de meudon, un grand parc, vaste, dedans, il y aurai des conférences, sensibilisations, sur les abandons, maltraitances, tout ce qui est lié aux animaux domestiques. après il y aurai une marche avec des animaux, rencontre avec des animaux qui pourrait adopter, et un repas festif a la fin.
+
+    Sur le livret, j'ai choisi de jouer avec les illustrations pour que ce soit personnels, dynamique, ludique et accrocheur que du texte, avec une approche nouvelle (texte coupé) afin d'attirer les lecteurs.
+
+    J'ai fait le logo à la main, car j'aime bien montré le coté fait mains, que ca me tiens à coeur, que c'est humain. Le logo est un petit chat qui est encerclé pour montrer que c'est le centre de l'attention.
+
+    - MARIA PAPA STAGE MEUDON (PROJET PRO)
+    Je devais faire un rollup et une affiche pour dire aux habitants de meudon qu'il y a une exposition sur maria papa, publicitaire
+
+    - STAGE MEUDON SOCIAL (PROJET PRO)
+    C'est une brochure et un flyer publicitaire, pour expliquer le centre social, accompagnement etc, donner envie aux jeunes de devenir porte paroles.
+
 - A propos de moi :
     Je suis Manon Arteta, graphiste diplômée d’une licence en design graphique et actuellement à la recherche d’une alternance pour mon Master Direction Artistique Communication 360 à LISAA Paris.
     J’ai réalisé deux années d’alternance chez OXYPHARM, où j’ai pu travailler sur des projets variés en print et en digital : identité visuelle, supports de communication, réseaux sociaux, newsletters, projets web et contenus interactifs.
