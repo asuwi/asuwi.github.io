@@ -70,10 +70,10 @@ function Home() {
             </div>
 
             <div className="relative mx-auto w-full max-w-xs md:max-w-sm">
-              <Blob className="absolute -inset-6 -z-10 bg-accent-soft" />
-              <Sparkle className="absolute -top-4 -right-2 h-8 w-8 text-accent" />
-              <Asterisk className="absolute -bottom-4 -left-4 h-10 w-10 text-accent-deep" />
-              <Flower className="absolute top-1/2 -right-7 h-8 w-8 text-accent" />
+              <Blob className="absolute -inset-6 -z-10 animate-breathe bg-accent-soft" />
+              <Sparkle className="absolute -top-4 -right-2 h-8 w-8 animate-twinkle text-accent" />
+              <Asterisk className="absolute -bottom-4 -left-4 h-10 w-10 animate-spin-slow text-accent-deep" />
+              <Flower className="absolute top-1/2 -right-7 h-8 w-8 animate-float text-accent" />
               <img
                 src={portrait}
                 alt={`Portrait de ${site.name}`}
