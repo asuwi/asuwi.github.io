@@ -3,10 +3,18 @@ export interface SocialLink {
   href: string
 }
 
+export type ServiceIcon =
+  | 'poster'
+  | 'pencil'
+  | 'screen'
+  | 'link'
+  | 'palette'
+  | 'play'
+
 export interface Service {
   title: string
   description: string
-  icon: string
+  icon: ServiceIcon
 }
 
 export interface Stat {
@@ -35,32 +43,32 @@ const site = {
     {
       title: 'Identité visuelle',
       description: 'Logo, système visuel et stratégie de marque',
-      icon: '✳',
+      icon: 'poster',
     },
     {
       title: 'Édition',
       description: 'Magazines, mises en page et supports print',
-      icon: '❋',
+      icon: 'pencil',
     },
     {
       title: 'Web & UI/UX',
       description: 'Interfaces modernes, responsives et centrées utilisateur',
-      icon: '◎',
+      icon: 'screen',
     },
     {
       title: 'Réseaux sociaux',
       description: 'Contenus qui captent le regard et engagent',
-      icon: '✿',
+      icon: 'link',
     },
     {
       title: 'Direction artistique',
       description: 'Grandes idées, art direction et visuels de campagne',
-      icon: '✦',
+      icon: 'palette',
     },
     {
       title: 'Vidéo & animation',
       description: 'Montage, motion et contenus animés',
-      icon: '▶',
+      icon: 'play',
     },
   ] as Service[],
   stats: [

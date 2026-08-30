@@ -94,33 +94,39 @@ function Home() {
 
       <Section tone="green">
         <Container>
-          <div className="grid gap-10 md:grid-cols-3 md:items-start">
-            <img
-              src={character1}
-              alt={`Portrait de ${site.name}`}
-              className="w-full max-w-sm"
-            />
-            <div className="md:-ml-10 lg:-ml-36">
+          <div className="relative grid gap-12 md:grid-cols-3 md:items-start">
+            <div className="relative mx-auto w-full max-w-sm">
+              <Blob className="absolute -inset-5 -z-10 animate-breathe bg-surface/15" />
+              <Sparkle className="absolute -top-3 -left-2 h-7 w-7 animate-twinkle text-surface" />
+              <Flower className="absolute -bottom-4 right-0 h-8 w-8 animate-float text-surface" />
+              <img
+                src={character1}
+                alt={`Illustration de ${site.name}`}
+                className="w-full"
+              />
+            </div>
+            <div className="relative md:-ml-10 lg:-ml-32">
+              <Asterisk className="absolute -top-2 right-56 h-9 w-9 animate-spin-slow text-surface/60" />
               <h2 className="font-display text-[clamp(1.5rem,3vw,2.25rem)] font-extrabold uppercase tracking-[-0.02em] text-surface">
                 Bonjour, je suis
-                <p className="mt-6 flex items-center gap-2 font-script text-3xl text-surface normal-case">
+                <span className="mt-6 flex items-center gap-2 font-script text-3xl font-semibold normal-case tracking-normal text-surface">
                   Manon
                   <span className="text-surface/80">♡</span>
-                </p>
-                <Squiggle className="mt-2 text-surface/70" />
+                </span>
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-surface/80">
+              <Squiggle className="mt-3 text-surface/60" />
+              <p className="mt-5 text-base leading-relaxed text-surface/80">
                 J’accompagne les marques dans leur développement avec un design
                 stratégique, des visuels affirmés et des expériences qui
                 marquent les esprits. Le design, c’est avant tout ce que votre
                 marque fait ressentir.
               </p>
             </div>
-            <ul className="flex flex-col divide-y divide-surface/20 border-t border-surface/20">
+            <ul className="flex flex-col gap-3">
               {expertise.map((item) => (
                 <li
                   key={item}
-                  className="flex items-center gap-3 py-3 text-sm font-medium text-surface"
+                  className="flex items-center gap-3 rounded-full border border-surface/20 bg-surface/10 px-5 py-2.5 text-sm font-medium text-surface transition-colors hover:bg-surface/20"
                 >
                   <span className="text-surface/70">✿</span>
                   {item}

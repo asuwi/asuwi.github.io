@@ -1,5 +1,22 @@
 import type { Service } from '../data/site.ts'
 import { cn } from './cn.ts'
+import {
+  LinkIcon,
+  PaletteIcon,
+  PencilIcon,
+  PlayIcon,
+  PosterIcon,
+  ScreenIcon,
+} from './Icons.tsx'
+
+const serviceIcons = {
+  poster: PosterIcon,
+  pencil: PencilIcon,
+  screen: ScreenIcon,
+  link: LinkIcon,
+  palette: PaletteIcon,
+  play: PlayIcon,
+} as const
 
 interface ServiceCardProps {
   service: Service
@@ -8,6 +25,7 @@ interface ServiceCardProps {
 
 function ServiceCard({ service, tone = 'default' }: ServiceCardProps) {
   const green = tone === 'green'
+  const Icon = serviceIcons[service.icon]
 
   return (
     <div
@@ -20,11 +38,11 @@ function ServiceCard({ service, tone = 'default' }: ServiceCardProps) {
     >
       <span
         className={cn(
-          'flex h-12 w-12 items-center justify-center rounded-full text-xl',
+          'flex h-12 w-12 items-center justify-center rounded-full',
           green ? 'bg-surface/20 text-surface' : 'bg-accent-soft text-accent',
         )}
       >
-        {service.icon}
+        <Icon className="h-6 w-6" />
       </span>
       <h3 className="font-display text-lg font-bold uppercase tracking-[-0.01em]">
         {service.title}
