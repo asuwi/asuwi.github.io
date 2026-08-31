@@ -35,6 +35,7 @@ function Project() {
           <p className="text-[15px] uppercase tracking-wide text-muted">
             {project.organization ? `${project.organization} — ` : ''}
             {project.kind}
+            {project.date ? ` — ${project.date}` : ''}
           </p>
         </header>
 

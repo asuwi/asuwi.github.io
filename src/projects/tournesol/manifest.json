@@ -8,9 +8,10 @@
     "Passionnée par la musique et par l'univers visuel des covers, j'ai choisi de concevoir une pochette inspirée du rock et du rap français actuel. Ce projet m'a permis de développer une direction artistique complète, de la création de la scénographie à la prise de vue, en passant par la retouche photographique et le travail typographique.",
     "J'ai particulièrement apprécié cette réalisation, car elle m'a permis de maîtriser chaque étape de conception afin d'aboutir à un véritable visuel de cover."
   ],
+  "date": "2024",
   "cover": "cover cd.jpg",
-  "captions": {
-    "cover cd.jpg": "Pochette",
-    "Cover dos mockup.jpg": "Dos de la pochette"
-  }
+  "images": [
+    { "src": "cover cd.jpg", "caption": "Pochette" },
+    { "src": "Cover dos mockup.jpg", "caption": "Dos de la pochette" }
+  ]
 }

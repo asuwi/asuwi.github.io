@@ -32,14 +32,26 @@ function ProjectCard({ project, index, tone = 'default' }: ProjectCardProps) {
         </span>
       </div>
       <div className="flex flex-col gap-1">
-        <p
-          className={cn(
-            'text-[13px] font-semibold uppercase tracking-wide',
-            tone === 'green' ? 'text-surface/80' : 'text-accent',
-          )}
-        >
-          {project.kind}
-        </p>
+        <div className="flex items-baseline justify-between gap-3">
+          <p
+            className={cn(
+              'text-[13px] font-semibold uppercase tracking-wide',
+              tone === 'green' ? 'text-surface/80' : 'text-accent',
+            )}
+          >
+            {project.kind}
+          </p>
+          {project.date ? (
+            <span
+              className={cn(
+                'shrink-0 text-[13px] uppercase tracking-wide',
+                tone === 'green' ? 'text-surface/60' : 'text-muted',
+              )}
+            >
+              {project.date}
+            </span>
+          ) : null}
+        </div>
         <h3 className="font-display text-xl font-bold uppercase tracking-[-0.01em]">
           {project.title}
         </h3>

@@ -18,15 +18,15 @@ Chaque projet est un dossier dans `src/projets/<slug>/` contenant :
   "tags": ["Identité visuelle", "Logo"],
   "description": ["Paragraphe 1", "Paragraphe 2"],
   "order": 1,                      // optionnel : ordre d'affichage
+  "date": "2024",                  // optionnel : année ("2024") ou range ("2023-2025")
   "cover": "02-palette.jpg",       // optionnel : image de couverture (sinon 1re image)
-  "captions": {                    // optionnel : légendes par nom de fichier
-    "01-logo.jpg": "Le logo final"
-  },
-  "exclude": ["03-brouillon.jpg"]  // optionnel : images du dossier à masquer
+  "images": [                      // optionnel : sinon les images du dossier sont auto-découvertes
+    { "src": "01-logo.jpg", "caption": "Le logo final", "date": "2024" }
+  ]
 }
 ```
 
-Le nom du dossier devient l'URL du projet (`/projets/<slug>`). Il suffit de déposer le dossier et ses images : la page est générée automatiquement au build.
+Les champs `caption` et `date` d'une image sont optionnels. Le nom du dossier devient l'URL du projet (`/projets/<slug>`). Il suffit de déposer le dossier et ses images : la page est générée automatiquement au build.
 
 ---
 

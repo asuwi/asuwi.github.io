@@ -8,11 +8,12 @@
     "Dans le cadre de mon stage, j'ai réalisé un roll-up et une affiche publicitaire pour informer les habitants de Meudon de la tenue d'une exposition consacrée à Maria Papa.",
     "Ces supports visaient à promouvoir l'exposition et à inciter le public à venir la découvrir."
   ],
+  "date": "2022",
   "cover": "Affiche Maria PAPA.png",
-  "captions": {
-    "Kakemono mockup Maria PAPA.jpeg": "Mockup du roll-up",
-    "Kakemono maria papa mockup.jpeg": "Mockup de l'affiche",
-    "Affiche Maria PAPA.png": "Affiche publicitaire",
-    "Kakemono Maria PAPA Stage_Page_2.png": "Roll-up publicitaire"
-  }
+  "images": [
+    { "src": "Affiche Maria PAPA.png", "caption": "Affiche publicitaire" },
+    { "src": "Kakemono mockup Maria PAPA.jpeg", "caption": "Mockup du roll-up" },
+    { "src": "Kakemono maria papa mockup.jpeg", "caption": "Mockup de l'affiche" },
+    { "src": "Kakemono Maria PAPA Stage_Page_2.png", "caption": "Roll-up publicitaire" }
+  ]
 }

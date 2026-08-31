@@ -98,9 +98,11 @@ function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) {
           alt={image?.caption ?? ''}
           className="max-h-[80vh] w-auto max-w-full rounded-[var(--radius-card)] border border-surface/20 bg-bg object-contain"
         />
-        {image?.caption ? (
+        {image?.caption || image?.date ? (
           <figcaption className="text-center text-sm text-surface/90">
             {image.caption}
+            {image?.caption && image?.date ? ' · ' : ''}
+            {image?.date}
           </figcaption>
         ) : null}
         <span className="text-xs uppercase tracking-wide text-surface/60">

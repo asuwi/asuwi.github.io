@@ -42,9 +42,10 @@ function ProjectGallery({ images, title }: ProjectGalleryProps) {
                 skeletonClassName="aspect-square w-full"
               />
             </button>
-            {image.caption ? (
-              <figcaption className="px-4 py-3 text-[13px] leading-snug text-muted">
-                {image.caption}
+            {image.caption || image.date ? (
+              <figcaption className="flex items-baseline justify-between gap-3 px-4 py-3 text-[13px] leading-snug text-muted">
+                <span>{image.caption}</span>
+                {image.date ? <span className="shrink-0">{image.date}</span> : null}
               </figcaption>
             ) : null}
           </figure>

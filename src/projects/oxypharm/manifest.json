@@ -3,30 +3,102 @@
   "category": "pro",
   "organization": "OXYPHARM",
   "kind": "Identité visuelle",
-  "tags": ["Identité visuelle", "Logo", "Branding"],
+  "tags": [
+    "Identité visuelle",
+    "Logo",
+    "Branding"
+  ],
   "description": [
     "J'ai eu l'opportunité de participer à la création du logo et de l'identité visuelle de la nouvelle entreprise Oxypharm, née de la fusion de Pharmat et d'Oxypharm.",
     "J'ai contribué aux différentes étapes de conception, notamment à la recherche de la nouvelle palette de couleurs, au choix des typographies et à la création du logo. L'objectif était de proposer une identité moderne, cohérente et adaptée aux attentes de la direction, tout en réunissant l'image des deux entreprises au sein d'une marque commune.",
     "Ce projet d'envergure a représenté une véritable opportunité dans mon parcours de graphiste. Il m'a permis de développer mon organisation, ma capacité de recherche, ma patience ainsi que mon aptitude à prendre en compte les demandes et les retours afin d'aboutir à un résultat pertinent et professionnel."
   ],
-  "cover": "LOGO OXYPHARM-V1.png",
   "order": 1,
-  "captions": {
-    "LOGO OXYPHARM-V1.png": "Nouveau logo Fusion Pharmat-Oxypharm",
-    "nouveau logo oxypharm siege interieur.png": "Nouveau logo au siège",
-    "logo-oxypharm-header.jpg": "Ancien Logo Oxypharm",
-    "pharmat-logo-big.jpg": "Ancien Logo Pharmat",
-    "Mock-up Livret Oxygene AVF Pharmat.png": "Livret Oxygène",
-    "Roll up Salon OXYPHARM.png": "Roll-up salon",
-    "rollup communication oxypharm.png": "Roll-up communication",
-    "communication pharmat.png": "Communication Pharmat",
-    "mockup carte invitation pharmat.png": "Carte d'invitation",
-    "mockup communication oxypharm.png": "Communication Oxypharm",
-    "mockup livret audit pliant pharmat.png": "Livret d'audit",
-    "mockup rollup communication pharmat.png": "Roll-up Pharmat",
-    "calendrier pharmat 2026.jpg": "Calendrier 2026",
-    "calendrier pharmat 2026 2.jpg": "Calendrier 2026",
-    "fresque murale oxypharm.jpg": "Fresque murale",
-    "vitrophamnie pharmat - DES PINS.png": "Vitrophanie Des Pins"
-  }
+  "date": "2024-En cours",
+  "cover": "LOGO OXYPHARM-V1.png",
+  "images": [
+    {
+      "src": "LOGO OXYPHARM-V1.png",
+      "caption": "Nouveau logo Fusion Pharmat-Oxypharm",
+      "date": "2026"
+    },
+    {
+      "src": "nouveau logo oxypharm siege interieur.png",
+      "caption": "Nouveau logo au siège",
+      "date": "2026"
+    },
+    {
+      "src": "logo-oxypharm-header.jpg",
+      "caption": "Ancien Logo Oxypharm"
+    },
+    {
+      "src": "pharmat-logo-big.jpg",
+      "caption": "Ancien Logo Pharmat"
+    },
+    {
+      "src": "Mock-up Livret Oxygene AVF Pharmat.png",
+      "caption": "Livret Oxygène",
+      "date": "2026"
+    },
+    {
+      "src": "Roll up Salon OXYPHARM.png",
+      "caption": "Roll-up salon",
+      "date": "2026"
+    },
+    {
+      "src": "rollup communication oxypharm.png",
+      "caption": "Roll-up communication",
+      "date": "2026"
+    },
+    {
+      "src": "communication pharmat.png",
+      "caption": "Communication Pharmat",
+      "date": "2026"
+    },
+    {
+      "src": "mockup carte invitation pharmat.png",
+      "caption": "Carte d'invitation",
+      "date": "2025"
+    },
+    {
+      "src": "mockup communication oxypharm.png",
+      "caption": "Communication Oxypharm",
+      "date": "2026"
+    },
+    {
+      "src": "mockup livret audit pliant pharmat.png",
+      "caption": "Livret d'audit",
+      "date": "2026"
+    },
+    {
+      "src": "mockup rollup communication pharmat.png",
+      "caption": "Roll-up Pharmat",
+      "date": "2025"
+    },
+    {
+      "src": "mockup calendrier pharmat 2026.jpg",
+      "caption": "Calendrier 2026",
+      "date": "2025"
+    },
+    {
+      "src": "mockup calendrier pharmat 2026 2.jpg",
+      "caption": "Calendrier 2026",
+      "date": "2025"
+    },
+    {
+      "src": "fresque murale oxypharm.jpg",
+      "caption": "Fresque murale",
+      "date": "2026"
+    },
+    {
+      "src": "mockup fresque murale oxypharm.png",
+      "caption": "Fresque murale",
+      "date": "2026"
+    },
+    {
+      "src": "vitrophamnie pharmat - DES PINS.png",
+      "caption": "Vitrophanie Des Pins",
+      "date": "2026"
+    }
+  ]
 }

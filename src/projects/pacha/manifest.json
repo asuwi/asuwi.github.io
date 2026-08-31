@@ -12,16 +12,17 @@
     "À travers cette identité soignée et sensible, Pacha souhaite montrer que l'attention portée à la marque reflète également celle accordée au bien-être des chats."
   ],
   "order": 1,
-  "captions": {
-    "1 logo pacha.jpg": "Le logo",
-    "Affiche A3 pacha.png": "Affiche A3",
-    "Carte de fidelite.png": "Carte de fidélité",
-    "livret.jpg": "Le livret",
-    "menu mockup.png": "Le menu",
-    "Porte menu pfe.jpg": "Le porte-menu",
-    "mock up croquette et gamelle.png": "Gamelle et croquettes",
-    "Sac a emporter MOCKUP.png": "Le sac à emporter",
-    "set de table pfe-10.png": "Le set de table",
-    "Tote bag Pacha.png": "Le tote bag"
-  }
+  "date": "2026",
+  "images": [
+    { "src": "1 logo pacha.jpg", "caption": "Le logo" },
+    { "src": "Affiche A3 pacha.png", "caption": "Affiche A3" },
+    { "src": "Carte de fidelite.png", "caption": "Carte de fidélité" },
+    { "src": "livret.jpg", "caption": "Le livret" },
+    { "src": "menu mockup.png", "caption": "Le menu" },
+    { "src": "Porte menu pfe.jpg", "caption": "Le porte-menu" },
+    { "src": "mock up croquette et gamelle.png", "caption": "Gamelle et croquettes" },
+    { "src": "Sac a emporter MOCKUP.png", "caption": "Le sac à emporter" },
+    { "src": "set de table pfe-10.png", "caption": "Le set de table" },
+    { "src": "Tote bag Pacha.png", "caption": "Le tote bag" }
+  ]
 }

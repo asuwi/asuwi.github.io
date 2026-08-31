@@ -9,10 +9,11 @@
     "Sur le livret, j'ai choisi de privilégier l'illustration au texte afin d'obtenir un objet personnel, dynamique, ludique et accrocheur. J'ai également adopté une approche nouvelle, en travaillant avec des textes coupés, pour attirer l'attention des lecteurs.",
     "Le logo a été dessiné à la main pour mettre en avant le côté fait main et humain du projet, qui me tient à cœur. Il représente un petit chat encerclé, placé au centre de l'attention."
   ],
+  "date": "2025",
   "cover": "Logo Coeur Sur la patte.png",
-  "captions": {
-    "Logo Coeur Sur la patte.png": "Le logo",
-    "logoCoeurSurLaPatte.png": "Le logo (variante)",
-    "Livret Coeursurlapatte.png": "Le livret"
-  }
+  "images": [
+    { "src": "Logo Coeur Sur la patte.png", "caption": "Le logo" },
+    { "src": "logoCoeurSurLaPatte.png", "caption": "Le logo (variante)" },
+    { "src": "Livret Coeursurlapatte.png", "caption": "Le livret" }
+  ]
 }

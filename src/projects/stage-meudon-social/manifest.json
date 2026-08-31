@@ -8,9 +8,10 @@
     "Dans le cadre de mon stage, j'ai conçu une brochure et un flyer publicitaire pour présenter le centre social de Meudon et son rôle d'accompagnement.",
     "L'objectif était de donner envie aux jeunes de s'engager et de devenir porte-paroles du centre."
   ],
+  "date": "2022",
   "cover": "CENTRE SOCIAL Mockup STAGE Brochure.pdf.png",
-  "captions": {
-    "CENTRE SOCIAL Mockup STAGE Brochure.pdf.png": "Mockup de la brochure",
-    "Mock-up FLYER CCJ ID Stage.pdf.jpg": "Mockup du flyer"
-  }
+  "images": [
+    { "src": "CENTRE SOCIAL Mockup STAGE Brochure.pdf.png", "caption": "Mockup de la brochure" },
+    { "src": "Mock-up FLYER CCJ ID Stage.pdf.jpg", "caption": "Mockup du flyer" }
+  ]
 }

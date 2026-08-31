@@ -5,6 +5,7 @@ export type Category = 'pro' | 'perso'
 export interface ProjectImage {
   src: string
   caption?: string
+  date?: string
 }
 
 export interface Project {
@@ -15,6 +16,7 @@ export interface Project {
   kind: string
   tags: string[]
   description: string[]
+  date?: string
   cover: string
   images: ProjectImage[]
 }
@@ -27,9 +29,9 @@ interface ProjectManifest {
   tags?: string[]
   description?: string[]
   order?: number
+  date?: string
   cover?: string
-  captions?: Record<string, string>
-  exclude?: string[]
+  images?: ProjectImage[]
 }
 
 const manifests = import.meta.glob<ProjectManifest>(
@@ -74,24 +76,17 @@ function resolveSrc(folder: Folder, filename: string): string {
 function resolveImages(
   folder: Folder,
   cover?: string,
-  captions?: Record<string, string>,
-  exclude?: string[],
+  manifestImages?: ProjectImage[],
 ): { images: ProjectImage[]; cover: string } {
-  const captionByBasename = new Map<string, string>()
-  for (const [name, caption] of Object.entries(captions ?? {})) {
-    captionByBasename.set(basename(name), caption)
-  }
-
-  const excluded = new Set((exclude ?? []).map(basename))
-
-  const sorted = [...folder.images.keys()]
-    .filter((filename) => !excluded.has(filename))
-    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-
-  const images = sorted.map((filename) => ({
-    src: folder.images.get(filename) as string,
-    caption: captionByBasename.get(filename),
-  }))
+  const images = manifestImages
+    ? manifestImages.map((image) => ({
+        src: resolveSrc(folder, image.src),
+        caption: image.caption,
+        date: image.date,
+      }))
+    : [...folder.images.keys()]
+        .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+        .map((filename) => ({ src: folder.images.get(filename) as string }))
 
   const coverSrc = cover ? resolveSrc(folder, cover) : images[0]?.src
   return { images, cover: coverSrc ?? '' }
@@ -102,8 +97,7 @@ function buildProject(folder: Folder): Project {
   const { images: resolvedImages, cover } = resolveImages(
     folder,
     manifest.cover,
-    manifest.captions,
-    manifest.exclude,
+    manifest.images,
   )
 
   return {
@@ -114,6 +108,7 @@ function buildProject(folder: Folder): Project {
     kind: manifest.kind,
     tags: manifest.tags ?? [],
     description: manifest.description ?? [],
+    date: manifest.date,
     cover,
     images: resolvedImages,
   }
