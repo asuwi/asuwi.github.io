@@ -12,6 +12,7 @@
     "Cet univers graphique mêle une esthétique rétro et actuelle, accompagnée de couleurs vintage choisies pour créer une ambiance chaleureuse et mémorable. L'illustration occupe également une place centrale dans les supports de communication. Son aspect fait main permet d'humaniser la marque, de rassurer les futurs adoptants et de transmettre les valeurs de douceur, de proximité et de bienveillance portées par Pacha.",
     "À travers cette identité soignée et sensible, Pacha souhaite montrer que l'attention portée à la marque reflète également celle accordée au bien-être des chats."
   ],
+  "order": 1,
   "images": [
     { "src": "1 logo pacha.jpg", "caption": "Le logo" },
     { "src": "Affiche A3 pacha.png", "caption": "Affiche A3" },

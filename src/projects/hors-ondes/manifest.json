@@ -9,6 +9,7 @@
     "Passionnée par le graphisme éditorial, cette réalisation m'a permis d'approfondir mes compétences tout en explorant un univers visuel qui me correspond."
   ],
   "cover": "Mockup Couv + dos.png",
+  "order": 2,
   "images": [
     { "src": "Mockup Couv + dos.png", "caption": "Couverture et dos" },
     { "src": "EDITO.png", "caption": "L'édito" },

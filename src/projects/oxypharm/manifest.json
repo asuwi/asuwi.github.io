@@ -10,10 +10,11 @@
     "Ce projet d'envergure a représenté une véritable opportunité dans mon parcours de graphiste. Il m'a permis de développer mon organisation, ma capacité de recherche, ma patience ainsi que mon aptitude à prendre en compte les demandes et les retours afin d'aboutir à un résultat pertinent et professionnel."
   ],
   "cover": "LOGO OXYPHARM-V1.png",
+  "order": 1,
   "images": [
-    { "src": "LOGO OXYPHARM-V1.png", "caption": "Le logo" },
-    { "src": "logo-oxypharm-header.jpg", "caption": "Le logo (en-tête)" },
-    { "src": "pharmat-logo-big.jpg", "caption": "Logo Pharmat" },
+    { "src": "LOGO OXYPHARM-V1.png", "caption": "Nouveau logo Fusion Pharmat-Oxypharm" },
+    { "src": "logo-oxypharm-header.jpg", "caption": "Ancien Logo Oxypharm" },
+    { "src": "pharmat-logo-big.jpg", "caption": "Ancien Logo Pharmat" },
     { "src": "mockup1.png", "caption": "Mockup" },
     { "src": "mockup 2.png", "caption": "Mockup" },
     { "src": "mockup4.png", "caption": "Mockup" },
