@@ -1,5 +1,11 @@
 import Container from '../components/Container.tsx'
 import PageHeading from '../components/PageHeading.tsx'
+import {
+  Asterisk,
+  Blob,
+  Flower,
+  Sparkle,
+} from '../components/Decorative.tsx'
 import { optimizedAsset } from '../data/optimizedImages.ts'
 
 const paragraphs = [
@@ -20,15 +26,15 @@ const skills = [
 ]
 
 function About() {
-  const portraitSrc = optimizedAsset('portrait')
+  const characterSrc = optimizedAsset('character2')
 
   return (
     <section className="min-h-[55vh]">
       <Container className="py-12 md:py-24">
         <PageHeading title="À propos" />
 
-        <div className="mb-12 grid gap-10 md:grid-cols-[1fr_auto] md:items-start">
-          <div className="flex max-w-[65ch] flex-col gap-5">
+        <div className="mb-12 grid gap-12 md:grid-cols-[0.8fr_0.8fr] md:items-start">
+          <div className="flex max-w-[70ch] flex-col gap-5">
             {paragraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 24)} className="text-base leading-[1.6]">
                 {paragraph}
@@ -36,12 +42,18 @@ function About() {
             ))}
           </div>
 
-          {portraitSrc ? (
-            <img
-              src={portraitSrc}
-              alt="Portrait de Manon Arteta"
-              className="w-64 rounded-[var(--radius-card)] border border-border md:w-80"
-            />
+          {characterSrc ? (
+            <div className="relative mx-auto w-full max-w-xs md:max-w-sm">
+              <Blob className="absolute -inset-6 -z-10 animate-breathe bg-accent-soft" />
+              <Sparkle className="absolute -top-4 -right-2 h-8 w-8 animate-twinkle text-accent" />
+              <Asterisk className="absolute -bottom-4 -left-4 h-10 w-10 animate-spin-slow text-accent-deep" />
+              <Flower className="absolute top-1/2 -right-7 h-8 w-8 animate-float text-accent" />
+              <img
+                src={characterSrc}
+                alt="Illustration de Manon Arteta"
+                className="w-full rounded-[var(--radius-card)] border border-border"
+              />
+            </div>
           ) : null}
         </div>
 
