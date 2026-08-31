@@ -20,7 +20,7 @@ function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={cn('mb-10', className)}>
-      <div className="flex items-baseline justify-between gap-4">
+      <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-baseline sm:justify-between">
         <h2
           className={cn(
             'font-display text-[clamp(1.5rem,3vw,2.25rem)] font-extrabold uppercase tracking-[-0.02em]',
