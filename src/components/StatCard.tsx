@@ -25,7 +25,7 @@ function StatCard({ stat, icon, tone = 'default' }: StatCardProps) {
       ) : null}
       <span
         className={cn(
-          'font-display text-[clamp(3.25rem,8vw,7rem)] font-black leading-[0.85] tracking-[-0.03em]',
+          'font-display text-[clamp(3rem,6vw,4.5rem)] font-black leading-[0.85] tracking-[-0.03em]',
           green ? 'text-surface' : 'text-accent-deep',
         )}
       >
