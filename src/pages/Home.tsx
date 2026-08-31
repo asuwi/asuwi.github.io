@@ -110,8 +110,7 @@ function Home() {
                 />
               ) : null}
             </div>
-            <div className="relative md:-ml-6 lg:-ml-20">
-              <Asterisk className="absolute -top-2 right-56 h-9 w-9 animate-spin-slow text-surface/60" />
+            <div className="relative">
               <h2 className="font-display text-[clamp(1.5rem,3vw,2.25rem)] font-extrabold uppercase tracking-[-0.02em] text-surface">
                 Bonjour, je suis
                 <span className="mt-6 flex items-center gap-2 font-script text-3xl font-semibold normal-case tracking-normal text-surface">
@@ -127,17 +126,20 @@ function Home() {
                 marque fait ressentir.
               </p>
             </div>
-            <ul className="flex flex-col gap-3">
-              {expertise.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center gap-3 rounded-full border border-surface/20 bg-surface/10 px-5 py-2.5 text-sm font-medium text-surface transition-colors hover:bg-surface/20"
-                >
-                  <span className="text-surface/70">✿</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className="relative">
+              <Asterisk className="absolute -top-6 -right-2 h-9 w-9 animate-spin-slow text-surface/60" />
+              <ul className="flex flex-col gap-3">
+                {expertise.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 rounded-full border border-surface/20 bg-surface/10 px-5 py-2.5 text-sm font-medium text-surface transition-colors hover:bg-surface/20"
+                  >
+                    <span className="text-surface/70">✿</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Container>
       </Section>
