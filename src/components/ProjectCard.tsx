@@ -43,14 +43,14 @@ function ProjectCard({ project, index, tone = 'default' }: ProjectCardProps) {
         <h3 className="font-display text-xl font-bold uppercase tracking-[-0.01em]">
           {project.title}
         </h3>
-        {project.client ? (
+        {project.organization ? (
           <p
             className={cn(
               'text-[13px] uppercase tracking-wide',
               tone === 'green' ? 'text-surface/60' : 'text-muted',
             )}
           >
-            {project.client}
+            {project.organization}
           </p>
         ) : null}
       </div>

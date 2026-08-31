@@ -11,7 +11,7 @@ export interface Project {
   slug: string
   title: string
   category: Category
-  client?: string
+  organization?: string
   kind: string
   tags: string[]
   description: string[]
@@ -22,7 +22,7 @@ export interface Project {
 interface ProjectManifest {
   title: string
   category: Category
-  client?: string
+  organization?: string
   kind: string
   tags?: string[]
   description?: string[]
@@ -110,7 +110,7 @@ function buildProject(folder: Folder): Project {
     slug: folder.slug,
     title: manifest.title,
     category: manifest.category,
-    client: manifest.client,
+    organization: manifest.organization,
     kind: manifest.kind,
     tags: manifest.tags ?? [],
     description: manifest.description ?? [],

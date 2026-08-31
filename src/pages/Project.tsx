@@ -33,7 +33,7 @@ function Project() {
             {project.title}
           </h1>
           <p className="text-[15px] uppercase tracking-wide text-muted">
-            {project.client ? `${project.client} — ` : ''}
+            {project.organization ? `${project.organization} — ` : ''}
             {project.kind}
           </p>
         </header>
