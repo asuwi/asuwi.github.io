@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { ProjectImage } from '../data/projects.ts'
+import ImageWithSkeleton from './ImageWithSkeleton.tsx'
 import Lightbox from './Lightbox.tsx'
 
 interface ProjectGalleryProps {
@@ -34,11 +35,11 @@ function ProjectGallery({ images, title }: ProjectGalleryProps) {
               className="block w-full cursor-zoom-in"
               aria-label={image.caption ?? `Voir l'image ${index + 1}`}
             >
-              <img
+              <ImageWithSkeleton
                 src={image.src}
                 alt={image.caption ?? ''}
-                loading="lazy"
-                className="w-full transition-transform duration-500 group-hover:scale-[1.02]"
+                className="w-full group-hover:scale-[1.02]"
+                skeletonClassName="aspect-square w-full"
               />
             </button>
             {image.caption ? (

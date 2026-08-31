@@ -1,4 +1,5 @@
-import { useState, type ReactNode } from 'react'
+import type { ReactNode } from 'react'
+import ImageWithSkeleton from './ImageWithSkeleton.tsx'
 
 interface CoverProps {
   src: string
@@ -8,19 +9,14 @@ interface CoverProps {
 }
 
 function Cover({ src, alt, className, fallback }: CoverProps) {
-  const [ok, setOk] = useState(true)
-
-  if (!ok || !src) {
-    return <>{fallback}</>
-  }
-
   return (
-    <img
-      className={className}
+    <ImageWithSkeleton
       src={src}
       alt={alt}
-      loading="lazy"
-      onError={() => setOk(false)}
+      className={className}
+      wrapperClassName="h-full w-full"
+      skeletonClassName="h-full w-full"
+      fallback={fallback}
     />
   )
 }

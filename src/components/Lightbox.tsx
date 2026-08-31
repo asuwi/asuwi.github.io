@@ -29,11 +29,17 @@ function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) {
     }
 
     window.addEventListener('keydown', onKeyDown)
+
+    const html = document.documentElement
+    const previousHtmlOverflow = html.style.overflow
+    const previousBodyOverflow = document.body.style.overflow
+    html.style.overflow = 'hidden'
     document.body.style.overflow = 'hidden'
 
     return () => {
       window.removeEventListener('keydown', onKeyDown)
-      document.body.style.overflow = ''
+      html.style.overflow = previousHtmlOverflow
+      document.body.style.overflow = previousBodyOverflow
     }
   }, [goPrev, goNext, onClose])
 
@@ -87,6 +93,7 @@ function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) {
         onClick={(event) => event.stopPropagation()}
       >
         <img
+          key={image?.src}
           src={image?.src}
           alt={image?.caption ?? ''}
           className="max-h-[80vh] w-auto max-w-full rounded-[var(--radius-card)] border border-surface/20 bg-bg object-contain"

@@ -18,7 +18,7 @@ function ProjectCard({ project, index, tone = 'default' }: ProjectCardProps) {
         <Cover
           src={project.cover}
           alt={project.title}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          className="h-full w-full object-cover group-hover:scale-[1.04]"
           fallback={
             <div className="flex h-full w-full items-end justify-start bg-[linear-gradient(135deg,var(--color-surface),var(--color-accent-soft))] p-4">
               <span className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[0.9] text-accent opacity-35">
