@@ -40,7 +40,7 @@ function Layout() {
             <Sparkle className="h-4 w-4 text-accent" />
           </NavLink>
 
-          <nav className="hidden items-center gap-4 md:flex md:gap-6">
+          <nav className="hidden items-center gap-4 xl:flex xl:gap-6">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
@@ -53,7 +53,7 @@ function Layout() {
             ))}
             <a
               href={site.emailHref}
-              className="hidden whitespace-nowrap rounded-full bg-accent px-5 py-2 text-[13px] font-semibold uppercase tracking-wide text-surface transition-colors hover:bg-accent-deep md:inline-block"
+              className="hidden whitespace-nowrap rounded-full bg-accent px-5 py-2 text-[13px] font-semibold uppercase tracking-wide text-surface transition-colors hover:bg-accent-deep xl:inline-block"
             >
               Travaillons ensemble
             </a>
@@ -65,7 +65,7 @@ function Layout() {
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-accent-deep transition-colors hover:bg-accent-soft md:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-accent-deep transition-colors hover:bg-accent-soft xl:hidden"
           >
             {menuOpen ? <CloseIcon /> : <MenuIcon />}
           </button>
@@ -74,7 +74,7 @@ function Layout() {
         {menuOpen ? (
           <div
             id="mobile-menu"
-            className="border-t border-border bg-bg md:hidden"
+            className="border-t border-border bg-bg xl:hidden"
           >
             <Container className="flex flex-col gap-1 py-4">
               {navLinks.map((link) => (
