@@ -20,6 +20,7 @@ import BrandIcon from '../components/BrandIcons.tsx'
 import type { BrandName } from '../data/brandIcons.ts'
 import { cn } from '../components/cn.ts'
 import { optimizedAsset } from '../data/optimizedImages.ts'
+import cvPdf from '../assets/cv.pdf'
 
 const paragraphs = [
   "Je suis Manon Arteta, graphiste diplômée d'une licence en design graphique et actuellement à la recherche d'une alternance pour mon Master Direction Artistique Communication 360 à LISAA Paris.",
@@ -134,6 +135,15 @@ function About() {
                 </p>
               ))}
             </div>
+
+            <a
+              href={cvPdf}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-surface transition-colors hover:bg-accent-deep"
+            >
+              Voir mon CV →
+            </a>
           </div>
 
           {characterSrc ? (
