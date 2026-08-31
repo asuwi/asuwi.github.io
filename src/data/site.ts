@@ -35,11 +35,9 @@ const site = {
   role: 'Graphiste & Direction artistique',
   location: undefined as string | undefined,
   email: undefined as string | undefined,//'manon.arteta@gmail.com',
-  emailHref: 'mailto:manon.arteta@example.com',
+  emailHref: 'mailto:manon.arteta@gmail.com',
   socials: [
-    { label: 'Instagram', href: 'https://instagram.com/' },
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/' },
-    { label: 'Behance', href: 'https://behance.net/' },
+    { label: 'LinkedIn', href: 'https://linkedin.com/in/manon-arteta' },
   ] as SocialLink[],
   services: [
     {
