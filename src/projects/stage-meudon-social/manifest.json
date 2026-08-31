@@ -1,0 +1,16 @@
+{
+  "title": "Centre social de Meudon",
+  "category": "pro",
+  "client": "Centre social de Meudon",
+  "kind": "Brochure & Flyer",
+  "tags": ["Brochure", "Flyer", "Publicité", "Print"],
+  "description": [
+    "Dans le cadre de mon stage, j'ai conçu une brochure et un flyer publicitaire pour présenter le centre social de Meudon et son rôle d'accompagnement.",
+    "L'objectif était de donner envie aux jeunes de s'engager et de devenir porte-paroles du centre."
+  ],
+  "cover": "CENTRE SOCIAL Mockup STAGE Brochure.pdf.png",
+  "images": [
+    { "src": "CENTRE SOCIAL Mockup STAGE Brochure.pdf.png", "caption": "Mockup de la brochure" },
+    { "src": "Mock-up FLYER CCJ ID Stage.pdf.jpg", "caption": "Mockup du flyer" }
+  ]
+}

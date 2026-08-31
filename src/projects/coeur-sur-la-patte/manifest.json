@@ -1,0 +1,19 @@
+{
+  "title": "Cœur sur la patte",
+  "category": "perso",
+  "client": "Cœur sur la patte",
+  "kind": "Identité visuelle & Édition",
+  "tags": ["Illustration", "Édition", "Logo", "Identité visuelle"],
+  "description": [
+    "Dans le cadre d'un projet de cours, j'ai conçu un livret pour Cœur sur la patte, une association que j'ai créée. Ce livret présente le projet et accompagne un événement imaginaire organisé dans l'observatoire de Meudon, au cœur d'un grand parc.",
+    "L'événement réunit des conférences et des actions de sensibilisation autour de l'abandon, de la maltraitance et du bien-être des animaux domestiques. Il se poursuit par une marche avec les animaux, des rencontres avec des animaux à adopter, puis se termine par un repas festif.",
+    "Sur le livret, j'ai choisi de privilégier l'illustration au texte afin d'obtenir un objet personnel, dynamique, ludique et accrocheur. J'ai également adopté une approche nouvelle, en travaillant avec des textes coupés, pour attirer l'attention des lecteurs.",
+    "Le logo a été dessiné à la main pour mettre en avant le côté fait main et humain du projet, qui me tient à cœur. Il représente un petit chat encerclé, placé au centre de l'attention."
+  ],
+  "cover": "Logo Coeur Sur la patte.png",
+  "images": [
+    { "src": "Logo Coeur Sur la patte.png", "caption": "Le logo" },
+    { "src": "logoCoeurSurLaPatte.png", "caption": "Le logo (variante)" },
+    { "src": "Livret Coeursurlapatte.png", "caption": "Le livret" }
+  ]
+}
