@@ -42,13 +42,13 @@ function Home() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-border">
-        <Container className="py-10 md:py-16">
+        <Container className="py-16 md:py-28 [@media(max-height:720px)]:py-10">
           <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-center">
             <div>
               <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.14em] text-accent">
                 {site.role}
               </p>
-              <h1 className="font-display text-[clamp(2.25rem,6vw,4.5rem)] font-black uppercase leading-[0.9] tracking-[-0.03em] text-accent-deep">
+              <h1 className="font-display text-[clamp(3rem,9vw,7rem)] [@media(max-height:720px)]:text-[clamp(2.25rem,6vw,4.5rem)] font-black uppercase leading-[0.9] tracking-[-0.03em] text-accent-deep">
                 Graphisme
                 <br />
                 &amp; direction
@@ -57,12 +57,12 @@ function Home() {
                   artistique
                 </span>
               </h1>
-              <p className="mt-5 max-w-[52ch] text-base leading-relaxed text-muted">
+              <p className="mt-6 max-w-[52ch] text-base leading-relaxed text-muted [@media(max-height:720px)]:mt-5">
                 Graphiste diplômée, je conçois des identités visuelles, des
                 éditions et des contenus digitaux qui captent le regard et
                 créent du lien.
               </p>
-              <div className="mt-6 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-4 [@media(max-height:720px)]:mt-6">
                 <Link
                   to="/projets-professionnels"
                   className="rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-surface transition-colors hover:bg-accent-deep"
