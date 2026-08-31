@@ -42,7 +42,7 @@ function Home() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-border">
-        <Container className="flex min-h-[calc(100svh-4.25rem-2rem)] flex-col justify-center py-16 [@media(max-height:720px)]:py-14">
+        <Container className="py-16 md:py-28 [@media(max-height:720px)]:py-14">
           <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-center">
             <div>
               <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.14em] text-accent">
