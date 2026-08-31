@@ -7,7 +7,7 @@ import { Sparkle } from './Decorative.tsx'
 
 const navLinks = [
   { to: '/', label: 'Accueil', end: true },
-  { to: '/projets-professionnels', label: 'Projets pro', end: false },
+  { to: '/projets-professionnels', label: 'Projets professionnels', end: false },
   { to: '/projets-perso', label: 'Projets personnels', end: false },
   { to: '/a-propos', label: 'À propos', end: false },
 ]
