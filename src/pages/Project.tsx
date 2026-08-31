@@ -46,11 +46,19 @@ function Project() {
           ))}
         </div>
 
+        <TagList tags={project.tags} className="mb-16" />
+
         <div className="mb-12">
+          <div className="mb-6 flex items-baseline justify-between gap-4">
+            <h2 className="font-display text-xl font-extrabold uppercase tracking-[-0.02em] text-accent-deep">
+              Galerie
+            </h2>
+            <span className="text-[13px] font-semibold uppercase tracking-wide text-muted">
+              {project.images.length} {project.images.length > 1 ? 'images' : 'image'}
+            </span>
+          </div>
           <ProjectGallery images={project.images} title={project.title} />
         </div>
-
-        <TagList tags={project.tags} className="mb-16" />
 
         <nav className="flex justify-between gap-6 border-t border-border pt-8">
           {prev ? (
