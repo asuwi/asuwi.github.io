@@ -86,6 +86,21 @@ export function PaletteIcon({ className }: IconProps) {
   )
 }
 
+export function MotionIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={cn('h-6 w-6', className)}
+      {...strokeProps}
+    >
+      <circle cx="6" cy="6" r="2.5" />
+      <path d="M11 6h7M6 11h12M6 16h4" />
+      <circle cx="18" cy="18" r="2.5" />
+    </svg>
+  )
+}
+
 export function MenuIcon({ className }: IconProps) {
   return (
     <svg
