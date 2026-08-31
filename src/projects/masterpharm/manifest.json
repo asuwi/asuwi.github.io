@@ -1,0 +1,19 @@
+{
+  "title": "Masterpharm",
+  "category": "pro",
+  "client": "Masterpharm",
+  "kind": "Supports de communication",
+  "tags": ["Flyer", "Affiche", "Print", "Communication"],
+  "description": [
+    "Pour Masterpharm, j'ai réalisé une série de supports de communication destinés à promouvoir les formations proposées par l'entreprise dans le secteur pharmaceutique.",
+    "Le projet regroupe une affiche, un flyer et un planning de formation, déclinés dans une identité graphique claire, lisible et professionnelle.",
+    "Chaque support a été pensé pour transmettre une information accessible et inciter le public à s'inscrire, tout en conservant une cohérence visuelle d'ensemble."
+  ],
+  "cover": "Mock-up Post Masterpham.png",
+  "order": 2,
+  "captions": {
+    "Mock-up Post Masterpham.png": "L'affiche",
+    "masterpharm mockup flyer.png": "Le flyer",
+    "mockup planning formation masterpharm.png": "Planning de formation"
+  }
+}

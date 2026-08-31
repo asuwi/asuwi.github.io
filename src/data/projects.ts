@@ -53,7 +53,7 @@ const folders: Folder[] = Object.keys(manifests).map((path) => {
 
   for (const imagePath of images) {
     if (imagePath.startsWith(folderPrefix)) {
-      const filename = imagePath.slice(folderPrefix.length)
+      const filename = imagePath.slice(folderPrefix.length).normalize('NFC')
       const url = optimizedUrl(imagePath)
       if (url) folderImages.set(filename, url)
     }
@@ -64,7 +64,7 @@ const folders: Folder[] = Object.keys(manifests).map((path) => {
 
 function basename(filename: string): string {
   const dot = filename.lastIndexOf('.')
-  return dot === -1 ? filename : filename.slice(0, dot)
+  return (dot === -1 ? filename : filename.slice(0, dot)).normalize('NFC')
 }
 
 function resolveSrc(folder: Folder, filename: string): string {
