@@ -73,7 +73,7 @@ function Home() {
                   to="/a-propos"
                   className="rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-surface transition-colors hover:bg-accent-deep"
                 >
-                  À propos
+                  À propos de moi
                 </Link>
               </div>
             </div>
