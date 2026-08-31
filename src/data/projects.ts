@@ -144,7 +144,7 @@ export const categoryMeta: Record<
     label: 'Projets professionnels',
     path: '/projets-professionnels',
     intro:
-      "Réalisations menées au sein de l'entreprise OXYPHARM et de ses marques, du print au digital.",
+      'Projets menés en contexte professionnel, du print au digital : identités visuelles, supports de communication et contenus interactifs.',
   },
   perso: {
     label: 'Projets personnels',
