@@ -38,16 +38,16 @@ function Project() {
           </p>
         </header>
 
-        <div className="mb-12">
-          <ProjectGallery images={project.images} title={project.title} />
-        </div>
-
         <div className="mb-10 flex max-w-[65ch] flex-col gap-5">
           {project.description.map((paragraph) => (
             <p key={paragraph.slice(0, 24)} className="text-base leading-[1.6]">
               {paragraph}
             </p>
           ))}
+        </div>
+
+        <div className="mb-12">
+          <ProjectGallery images={project.images} title={project.title} />
         </div>
 
         <TagList tags={project.tags} className="mb-16" />
