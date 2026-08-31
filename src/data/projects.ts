@@ -19,11 +19,6 @@ export interface Project {
   images: ProjectImage[]
 }
 
-interface ManifestImage {
-  src: string
-  caption?: string
-}
-
 interface ProjectManifest {
   title: string
   category: Category
@@ -33,7 +28,8 @@ interface ProjectManifest {
   description?: string[]
   order?: number
   cover?: string
-  images?: ManifestImage[]
+  captions?: Record<string, string>
+  exclude?: string[]
 }
 
 const manifests = import.meta.glob<ProjectManifest>(
@@ -78,30 +74,27 @@ function resolveSrc(folder: Folder, filename: string): string {
 function resolveImages(
   folder: Folder,
   cover?: string,
-  manifestImages?: ManifestImage[],
+  captions?: Record<string, string>,
+  exclude?: string[],
 ): { images: ProjectImage[]; cover: string } {
-  if (manifestImages && manifestImages.length > 0) {
-    const images = manifestImages
-      .map((image) => {
-        const src = resolveSrc(folder, image.src)
-        if (!src) return undefined
-        return { src, caption: image.caption } as ProjectImage
-      })
-      .filter((image): image is ProjectImage => image !== undefined)
-
-    const coverSrc = cover ? resolveSrc(folder, cover) : images[0]?.src
-    return { images, cover: coverSrc ?? '' }
+  const captionByBasename = new Map<string, string>()
+  for (const [name, caption] of Object.entries(captions ?? {})) {
+    captionByBasename.set(basename(name), caption)
   }
 
-  const sorted = [...folder.images.keys()].sort((a, b) =>
-    a.localeCompare(b, undefined, { numeric: true }),
-  )
-  const resolved = sorted.map((filename) => ({
+  const excluded = new Set((exclude ?? []).map(basename))
+
+  const sorted = [...folder.images.keys()]
+    .filter((filename) => !excluded.has(filename))
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+
+  const images = sorted.map((filename) => ({
     src: folder.images.get(filename) as string,
+    caption: captionByBasename.get(filename),
   }))
 
-  const coverSrc = cover ? resolveSrc(folder, cover) : resolved[0]?.src
-  return { images: resolved, cover: coverSrc ?? '' }
+  const coverSrc = cover ? resolveSrc(folder, cover) : images[0]?.src
+  return { images, cover: coverSrc ?? '' }
 }
 
 function buildProject(folder: Folder): Project {
@@ -109,7 +102,8 @@ function buildProject(folder: Folder): Project {
   const { images: resolvedImages, cover } = resolveImages(
     folder,
     manifest.cover,
-    manifest.images,
+    manifest.captions,
+    manifest.exclude,
   )
 
   return {

@@ -9,8 +9,8 @@
     "L'objectif était de donner envie aux jeunes de s'engager et de devenir porte-paroles du centre."
   ],
   "cover": "CENTRE SOCIAL Mockup STAGE Brochure.pdf.png",
-  "images": [
-    { "src": "CENTRE SOCIAL Mockup STAGE Brochure.pdf.png", "caption": "Mockup de la brochure" },
-    { "src": "Mock-up FLYER CCJ ID Stage.pdf.jpg", "caption": "Mockup du flyer" }
-  ]
+  "captions": {
+    "CENTRE SOCIAL Mockup STAGE Brochure.pdf.png": "Mockup de la brochure",
+    "Mock-up FLYER CCJ ID Stage.pdf.jpg": "Mockup du flyer"
+  }
 }

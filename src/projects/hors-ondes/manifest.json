@@ -10,12 +10,12 @@
   ],
   "cover": "Mockup Couv + dos.png",
   "order": 2,
-  "images": [
-    { "src": "Mockup Couv + dos.png", "caption": "Couverture et dos" },
-    { "src": "EDITO.png", "caption": "L'édito" },
-    { "src": "agenda mockup.png", "caption": "L'agenda" },
-    { "src": "mockup focus.png", "caption": "Le focus" },
-    { "src": "wallace interv.png", "caption": "Interview de Wallace" },
-    { "src": "theodora.png", "caption": "Theodora" }
-  ]
+  "captions": {
+    "Mockup Couv + dos.png": "Couverture et dos",
+    "EDITO.png": "L'édito",
+    "agenda mockup.png": "L'agenda",
+    "mockup focus.png": "Le focus",
+    "wallace interv.png": "Interview de Wallace",
+    "theodora.png": "Theodora"
+  }
 }

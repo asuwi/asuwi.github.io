@@ -9,7 +9,7 @@
     "Ces supports visaient à promouvoir l'exposition et à inciter le public à venir la découvrir."
   ],
   "cover": "Kakemono mockup Maria PAPA.jpeg",
-  "images": [
-    { "src": "Kakemono mockup Maria PAPA.jpeg", "caption": "Mockup du roll-up" }
-  ]
+  "captions": {
+    "Kakemono mockup Maria PAPA.jpeg": "Mockup du roll-up"
+  }
 }

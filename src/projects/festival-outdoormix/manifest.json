@@ -10,15 +10,15 @@
     "La gamme de merchandising regroupe t-shirts, chaussettes et tasse, déclinés en plusieurs coloris et présentés à travers une série de mockups afin de mettre en valeur chaque pièce de façon réaliste et cohérente."
   ],
   "cover": "Logo des merch.png",
-  "images": [
-    { "src": "Logo des merch.png", "caption": "Le logo" },
-    { "src": "Mockup t shirt noir.png", "caption": "T-shirt noir" },
-    { "src": "Mockup t shirt blanc.png", "caption": "T-shirt blanc" },
-    { "src": "Mockup t shirt dos noir.png", "caption": "Dos du t-shirt noir" },
-    { "src": "Mockup t shirt dos blanc.png", "caption": "Dos du t-shirt blanc" },
-    { "src": "Dos du Tshirt.png", "caption": "Dos du t-shirt" },
-    { "src": "Mockup chaussettes noires.png", "caption": "Chaussettes noires" },
-    { "src": "Mockup chaussettes blanches.png", "caption": "Chaussettes blanches" },
-    { "src": "Tasse merch.png", "caption": "La tasse" }
-  ]
+  "captions": {
+    "Logo des merch.png": "Le logo",
+    "Mockup t shirt noir.png": "T-shirt noir",
+    "Mockup t shirt blanc.png": "T-shirt blanc",
+    "Mockup t shirt dos noir.png": "Dos du t-shirt noir",
+    "Mockup t shirt dos blanc.png": "Dos du t-shirt blanc",
+    "Dos du Tshirt.png": "Dos du t-shirt",
+    "Mockup chaussettes noires.png": "Chaussettes noires",
+    "Mockup chaussettes blanches.png": "Chaussettes blanches",
+    "Tasse merch.png": "La tasse"
+  }
 }

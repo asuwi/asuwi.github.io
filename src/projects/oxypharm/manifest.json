@@ -11,16 +11,16 @@
   ],
   "cover": "LOGO OXYPHARM-V1.png",
   "order": 1,
-  "images": [
-    { "src": "LOGO OXYPHARM-V1.png", "caption": "Nouveau logo Fusion Pharmat-Oxypharm" },
-    { "src": "logo-oxypharm-header.jpg", "caption": "Ancien Logo Oxypharm" },
-    { "src": "pharmat-logo-big.jpg", "caption": "Ancien Logo Pharmat" },
-    { "src": "mockup1.png", "caption": "Mockup" },
-    { "src": "mockup 2.png", "caption": "Mockup" },
-    { "src": "mockup4.png", "caption": "Mockup" },
-    { "src": "mockup5.png", "caption": "Mockup" },
-    { "src": "mockup7.png", "caption": "Mockup" },
-    { "src": "mockup 8.png", "caption": "Mockup" },
-    { "src": "mockup9.png", "caption": "Mockup" }
-  ]
+  "captions": {
+    "LOGO OXYPHARM-V1.png": "Nouveau logo Fusion Pharmat-Oxypharm",
+    "logo-oxypharm-header.jpg": "Ancien Logo Oxypharm",
+    "pharmat-logo-big.jpg": "Ancien Logo Pharmat",
+    "mockup1.png": "Mockup",
+    "mockup 2.png": "Mockup",
+    "mockup4.png": "Mockup",
+    "mockup5.png": "Mockup",
+    "mockup7.png": "Mockup",
+    "mockup 8.png": "Mockup",
+    "mockup9.png": "Mockup"
+  }
 }

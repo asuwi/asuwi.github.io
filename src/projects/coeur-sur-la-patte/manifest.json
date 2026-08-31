@@ -11,9 +11,9 @@
     "Le logo a été dessiné à la main pour mettre en avant le côté fait main et humain du projet, qui me tient à cœur. Il représente un petit chat encerclé, placé au centre de l'attention."
   ],
   "cover": "Logo Coeur Sur la patte.png",
-  "images": [
-    { "src": "Logo Coeur Sur la patte.png", "caption": "Le logo" },
-    { "src": "logoCoeurSurLaPatte.png", "caption": "Le logo (variante)" },
-    { "src": "Livret Coeursurlapatte.png", "caption": "Le livret" }
-  ]
+  "captions": {
+    "Logo Coeur Sur la patte.png": "Le logo",
+    "logoCoeurSurLaPatte.png": "Le logo (variante)",
+    "Livret Coeursurlapatte.png": "Le livret"
+  }
 }

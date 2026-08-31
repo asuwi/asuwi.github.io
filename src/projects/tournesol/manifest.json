@@ -10,8 +10,8 @@
     "J'ai particulièrement apprécié cette réalisation, car elle m'a permis de maîtriser chaque étape de conception afin d'aboutir à un véritable visuel de cover."
   ],
   "cover": "cover cd.jpg",
-  "images": [
-    { "src": "cover cd.jpg", "caption": "Pochette" },
-    { "src": "Cover dos mockup.jpg", "caption": "Dos de la pochette" }
-  ]
+  "captions": {
+    "cover cd.jpg": "Pochette",
+    "Cover dos mockup.jpg": "Dos de la pochette"
+  }
 }

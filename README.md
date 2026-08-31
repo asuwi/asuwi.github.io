@@ -19,10 +19,10 @@ Chaque projet est un dossier dans `src/projets/<slug>/` contenant :
   "description": ["Paragraphe 1", "Paragraphe 2"],
   "order": 1,                      // optionnel : ordre d'affichage
   "cover": "02-palette.jpg",       // optionnel : image de couverture (sinon 1re image)
-  "images": [                      // optionnel : sinon auto-détection triée par nom de fichier
-    { "src": "01-logo.jpg", "caption": "Le logo final" },
-    { "src": "02-palette.jpg" }
-  ]
+  "captions": {                    // optionnel : légendes par nom de fichier
+    "01-logo.jpg": "Le logo final"
+  },
+  "exclude": ["03-brouillon.jpg"]  // optionnel : images du dossier à masquer
 }
 ```
 
