@@ -1,0 +1,25 @@
+{
+  "title": "Oxypharm",
+  "category": "pro",
+  "client": "OXYPHARM",
+  "kind": "Identité visuelle",
+  "tags": ["Identité visuelle", "Logo", "Branding"],
+  "description": [
+    "J'ai eu l'opportunité de participer à la création du logo et de l'identité visuelle de la nouvelle entreprise Oxypharm, née de la fusion de Pharmat et d'Oxypharm.",
+    "J'ai contribué aux différentes étapes de conception, notamment à la recherche de la nouvelle palette de couleurs, au choix des typographies et à la création du logo. L'objectif était de proposer une identité moderne, cohérente et adaptée aux attentes de la direction, tout en réunissant l'image des deux entreprises au sein d'une marque commune.",
+    "Ce projet d'envergure a représenté une véritable opportunité dans mon parcours de graphiste. Il m'a permis de développer mon organisation, ma capacité de recherche, ma patience ainsi que mon aptitude à prendre en compte les demandes et les retours afin d'aboutir à un résultat pertinent et professionnel."
+  ],
+  "cover": "LOGO OXYPHARM-V1.png",
+  "images": [
+    { "src": "LOGO OXYPHARM-V1.png", "caption": "Le logo" },
+    { "src": "logo-oxypharm-header.jpg", "caption": "Le logo (en-tête)" },
+    { "src": "pharmat-logo-big.jpg", "caption": "Logo Pharmat" },
+    { "src": "mockup1.png", "caption": "Mockup" },
+    { "src": "mockup 2.png", "caption": "Mockup" },
+    { "src": "mockup4.png", "caption": "Mockup" },
+    { "src": "mockup5.png", "caption": "Mockup" },
+    { "src": "mockup7.png", "caption": "Mockup" },
+    { "src": "mockup 8.png", "caption": "Mockup" },
+    { "src": "mockup9.png", "caption": "Mockup" }
+  ]
+}
