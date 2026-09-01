@@ -12,6 +12,10 @@ import css3 from '../assets/brands/css3.svg'
 import stripo from '../assets/brands/stripo.svg'
 import linkedin from '../assets/brands/linkedin.svg'
 import instagram from '../assets/brands/instagram.svg'
+import word from '../assets/brands/word.svg'
+import excel from '../assets/brands/excel.svg'
+import powerpoint from '../assets/brands/powerpoint.svg'
+import canva from '../assets/brands/canva.svg'
 
 export const brandIcons = {
   photoshop,
@@ -28,6 +32,10 @@ export const brandIcons = {
   stripo,
   linkedin,
   instagram,
+  word,
+  excel,
+  powerpoint,
+  canva,
 } as const
 
 export type BrandName = keyof typeof brandIcons

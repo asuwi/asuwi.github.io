@@ -9,6 +9,7 @@ import {
   Sparkle,
 } from '../components/Decorative.tsx'
 import {
+  BriefcaseIcon,
   MegaphoneIcon,
   MotionIcon,
   PaletteIcon,
@@ -37,6 +38,7 @@ const skillIcons = {
   motion: MotionIcon,
   palette: PaletteIcon,
   megaphone: MegaphoneIcon,
+  briefcase: BriefcaseIcon,
 } as const
 
 interface SkillItem {
@@ -88,6 +90,7 @@ const skillGroups: SkillGroup[] = [
     items: [
       { label: 'InDesign', brand: 'indesign' },
       { label: 'Illustrator', brand: 'illustrator' },
+      { label: 'Canva', brand: 'canva' },
       { label: 'Mise en page' },
       { label: 'Print' },
     ],
@@ -121,6 +124,15 @@ const skillGroups: SkillGroup[] = [
       { label: 'Community management' },
       { label: 'Création de contenus' },
       { label: 'Newsletters' },
+    ],
+  },
+  {
+    title: 'Bureautique & Office',
+    icon: 'briefcase',
+    items: [
+      { label: 'Word', brand: 'word' },
+      { label: 'Excel', brand: 'excel' },
+      { label: 'PowerPoint', brand: 'powerpoint' },
     ],
   },
 ]
@@ -191,12 +203,14 @@ function About() {
                   key={group.title}
                   className="flex flex-col gap-3 rounded-[var(--radius-card)] border border-surface/20 bg-white/10 p-6 transition-colors hover:border-surface/50"
                 >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-surface/20 text-surface">
-                    <Icon className="h-6 w-6" />
-                  </span>
-                  <h3 className="font-display text-lg font-bold uppercase tracking-[-0.01em]">
-                    {group.title}
-                  </h3>
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-surface/20 text-surface">
+                      <Icon className="h-5 w-5" />
+                    </span>
+                    <h3 className="font-display text-lg font-bold uppercase leading-tight tracking-[-0.01em]">
+                      {group.title}
+                    </h3>
+                  </div>
                   <ul className="flex flex-wrap gap-2">
                     {group.items.map((item) => (
                       <li

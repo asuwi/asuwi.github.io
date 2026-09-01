@@ -141,6 +141,22 @@ export function MegaphoneIcon({ className }: IconProps) {
   )
 }
 
+export function BriefcaseIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={cn('h-6 w-6', className)}
+      {...strokeProps}
+    >
+      <rect x="3" y="7.5" width="18" height="12" rx="2" />
+      <path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5" />
+      <path d="M3 12.5h18" />
+      <path d="M10 12.5v2h4v-2" />
+    </svg>
+  )
+}
+
 export function PlayIcon({ className }: IconProps) {
   return (
     <svg

@@ -36,17 +36,19 @@ function ServiceCard({ service, tone = 'default' }: ServiceCardProps) {
           : 'border-border bg-surface hover:border-accent',
       )}
     >
-      <span
-        className={cn(
-          'flex h-12 w-12 items-center justify-center rounded-full',
-          green ? 'bg-surface/20 text-surface' : 'bg-accent-soft text-accent',
-        )}
-      >
-        <Icon className="h-6 w-6" />
-      </span>
-      <h3 className="font-display text-lg font-bold uppercase tracking-[-0.01em]">
-        {service.title}
-      </h3>
+      <div className="flex items-center gap-3">
+        <span
+          className={cn(
+            'flex h-11 w-11 shrink-0 items-center justify-center rounded-full',
+            green ? 'bg-surface/20 text-surface' : 'bg-accent-soft text-accent',
+          )}
+        >
+          <Icon className="h-5 w-5" />
+        </span>
+        <h3 className="font-display text-lg font-bold uppercase leading-tight tracking-[-0.01em]">
+          {service.title}
+        </h3>
+      </div>
       <p
         className={cn(
           'text-sm leading-relaxed',
