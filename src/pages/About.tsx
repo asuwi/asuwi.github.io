@@ -188,7 +188,7 @@ function About() {
         </div>
       </Container>
 
-      <Section tone="green">
+      <Section tone="green" borderBottom={false}>
         <Container>
           <SectionHeader
             tone="green"

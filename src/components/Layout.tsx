@@ -110,7 +110,7 @@ function Layout() {
         <Outlet />
       </main>
 
-      <footer className="relative overflow-hidden border-t border-border bg-accent-deep text-surface">
+      <footer className="relative overflow-hidden bg-accent-deep text-surface">
         <Container className="relative py-16 md:py-24">
           <section className="flex max-w-[30ch] flex-col items-start gap-3">
             <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-soft">

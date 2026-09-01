@@ -5,13 +5,20 @@ interface SectionProps {
   children: ReactNode
   className?: string
   tone?: 'default' | 'green'
+  borderBottom?: boolean
 }
 
-function Section({ children, className, tone = 'default' }: SectionProps) {
+function Section({
+  children,
+  className,
+  tone = 'default',
+  borderBottom = true,
+}: SectionProps) {
   return (
     <section
       className={cn(
-        'border-b border-border py-12 md:py-24',
+        'py-12 md:py-24',
+        borderBottom && 'border-b border-border',
         tone === 'green' && 'bg-accent text-surface',
         className,
       )}
