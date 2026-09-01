@@ -1,5 +1,6 @@
 import Container from '../components/Container.tsx'
 import PageHeading from '../components/PageHeading.tsx'
+import TagList from '../components/TagList.tsx'
 import Section from '../components/Section.tsx'
 import SectionHeader from '../components/SectionHeader.tsx'
 import {
@@ -161,6 +162,19 @@ function About() {
                 </p>
               ))}
             </div>
+
+            <TagList
+              className="mt-8"
+              tags={[
+                'Proactive',
+                'Esprit d\u2019équipe',
+                'Force de proposition',
+                'Curieuse',
+                'Créative',
+                'Rigoureuse',
+                'Efficace',
+              ]}
+            />
 
             <a
               href={cvPdf}
