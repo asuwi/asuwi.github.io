@@ -55,7 +55,7 @@ function Layout() {
               href={site.emailHref}
               className="hidden whitespace-nowrap rounded-full bg-accent px-5 py-2 text-[13px] font-semibold uppercase tracking-wide text-surface transition-colors hover:bg-accent-deep xl:inline-block"
             >
-              Travaillons ensemble
+              Me contacter
             </a>
           </nav>
 
