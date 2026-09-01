@@ -98,7 +98,7 @@ function Home() {
       <Section tone="green">
         <Container>
           <div className="relative grid gap-12 md:grid-cols-3 md:items-start">
-            <div className="relative mx-auto w-full max-w-sm">
+            <div className="relative mx-auto w-full max-w-sm order-last md:order-none">
               <Blob className="absolute -inset-5 -z-10 animate-breathe bg-surface/15" />
               <Sparkle className="absolute -top-4 -left-4 h-8 w-8 animate-twinkle text-surface" />
               <Flower className="absolute -bottom-4 -right-4 h-8 w-8 animate-float text-surface" />
