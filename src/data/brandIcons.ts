@@ -10,6 +10,8 @@ import framer from '../assets/brands/framer.svg'
 import html5 from '../assets/brands/html5.svg'
 import css3 from '../assets/brands/css3.svg'
 import stripo from '../assets/brands/stripo.svg'
+import linkedin from '../assets/brands/linkedin.svg'
+import instagram from '../assets/brands/instagram.svg'
 
 export const brandIcons = {
   photoshop,
@@ -24,6 +26,8 @@ export const brandIcons = {
   html5,
   css3,
   stripo,
+  linkedin,
+  instagram,
 } as const
 
 export type BrandName = keyof typeof brandIcons

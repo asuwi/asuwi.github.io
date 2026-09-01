@@ -9,6 +9,7 @@ import {
   Sparkle,
 } from '../components/Decorative.tsx'
 import {
+  MegaphoneIcon,
   MotionIcon,
   PaletteIcon,
   PencilIcon,
@@ -35,6 +36,7 @@ const skillIcons = {
   poster: PosterIcon,
   motion: MotionIcon,
   palette: PaletteIcon,
+  megaphone: MegaphoneIcon,
 } as const
 
 interface SkillItem {
@@ -109,6 +111,18 @@ const skillGroups: SkillGroup[] = [
       { label: 'Stratégie de marque' },
     ],
   },
+  {
+    title: 'Réseaux sociaux',
+    icon: 'megaphone',
+    items: [
+      { label: 'LinkedIn', brand: 'linkedin' },
+      { label: 'Instagram', brand: 'instagram' },
+      { label: 'Gestion des réseaux sociaux' },
+      { label: 'Community management' },
+      { label: 'Création de contenus' },
+      { label: 'Newsletters' },
+    ],
+  },
 ]
 
 function About() {
@@ -166,7 +180,7 @@ function About() {
         <Container>
           <SectionHeader
             tone="green"
-            title="Mes compétences"
+            title="Mes compétences et outils"
             intro="Des outils aux disciplines, ce que j'utilise et ce que j'aime créer au quotidien."
           />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

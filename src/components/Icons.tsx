@@ -127,6 +127,20 @@ export function CloseIcon({ className }: IconProps) {
   )
 }
 
+export function MegaphoneIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={cn('h-6 w-6', className)}
+      {...strokeProps}
+    >
+      <path d="M3 11v3l4 2v3a2 2 0 0 0 2 2h.5a2 2 0 0 0 2-2v-3.5l8 3.5V6l-8 3.5V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v6" />
+      <path d="M19 10a3 3 0 0 1 0 5" />
+    </svg>
+  )
+}
+
 export function PlayIcon({ className }: IconProps) {
   return (
     <svg
