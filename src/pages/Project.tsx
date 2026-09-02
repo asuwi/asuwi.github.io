@@ -58,7 +58,11 @@ function Project() {
               {project.images.length} {project.images.length > 1 ? 'images' : 'image'}
             </span>
           </div>
-          <ProjectGallery images={project.images} title={project.title} />
+          <ProjectGallery
+            gallery={project.gallery}
+            images={project.images}
+            title={project.title}
+          />
         </div>
 
         <nav className="flex justify-between gap-6 border-t border-border pt-8">

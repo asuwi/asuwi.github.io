@@ -18,22 +18,27 @@
   "cover": "LOGO OXYPHARM-V1.png",
   "images": [
     {
-      "src": "LOGO OXYPHARM-V1.png",
-      "caption": "Nouveau logo Fusion Pharmat-Oxypharm",
-      "date": "2026"
-    },
-    {
-      "src": "nouveau logo oxypharm siege interieur.png",
-      "caption": "Nouveau logo au siège",
-      "date": "2026"
-    },
-    {
-      "src": "logo-oxypharm-header.jpg",
-      "caption": "Ancien Logo Oxypharm"
-    },
-    {
-      "src": "pharmat-logo-big.jpg",
-      "caption": "Ancien Logo Pharmat"
+      "group": [
+        {
+          "src": "LOGO OXYPHARM-V1.png",
+          "caption": "Nouveau logo Fusion Pharmat-Oxypharm",
+          "date": "2026"
+        },
+        {
+          "src": "nouveau logo oxypharm siege interieur.png",
+          "caption": "Nouveau logo au siège",
+          "date": "2026"
+        },
+        {
+          "src": "logo-oxypharm-header.jpg",
+          "caption": "Ancien Logo Oxypharm"
+        },
+        {
+          "src": "pharmat-logo-big.jpg",
+          "caption": "Ancien Logo Pharmat"
+        }
+      ],
+      "caption": "Logos fusion Pharmat-Oxypharm"
     },
     {
       "src": "Mock-up Livret Oxygene AVF Pharmat.png",
@@ -76,24 +81,34 @@
       "date": "2025"
     },
     {
-      "src": "mockup calendrier pharmat 2026.jpg",
-      "caption": "Calendrier 2026",
-      "date": "2025"
+      "group": [
+        {
+          "src": "mockup calendrier pharmat 2026.jpg",
+          "caption": "Calendrier 2026",
+          "date": "2025"
+        },
+        {
+          "src": "mockup calendrier pharmat 2026 2.jpg",
+          "caption": "Calendrier 2026",
+          "date": "2025"
+        }
+      ],
+      "caption": "Calendrier 2026"
     },
     {
-      "src": "mockup calendrier pharmat 2026 2.jpg",
-      "caption": "Calendrier 2026",
-      "date": "2025"
-    },
-    {
-      "src": "fresque murale oxypharm.jpg",
-      "caption": "Fresque murale",
-      "date": "2026"
-    },
-    {
-      "src": "mockup fresque murale oxypharm.png",
-      "caption": "Fresque murale",
-      "date": "2026"
+      "group": [
+        {
+          "src": "fresque murale oxypharm.jpg",
+          "caption": "Fresque murale",
+          "date": "2026"
+        },
+        {
+          "src": "mockup fresque murale oxypharm.png",
+          "caption": "Fresque murale",
+          "date": "2026"
+        }
+      ],
+      "caption": "Fresque murale"
     },
     {
       "src": "vitrophamnie pharmat - DES PINS.png",

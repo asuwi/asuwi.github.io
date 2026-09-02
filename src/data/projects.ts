@@ -8,6 +8,14 @@ export interface ProjectImage {
   date?: string
 }
 
+export interface ImageGroup {
+  images: ProjectImage[]
+  caption?: string
+  date?: string
+}
+
+export type GalleryItem = ProjectImage | ImageGroup
+
 export interface Project {
   slug: string
   title: string
@@ -19,6 +27,13 @@ export interface Project {
   date?: string
   cover: string
   images: ProjectImage[]
+  gallery: GalleryItem[]
+}
+
+interface ManifestGroup {
+  group: ProjectImage[]
+  caption?: string
+  date?: string
 }
 
 interface ProjectManifest {
@@ -31,7 +46,7 @@ interface ProjectManifest {
   order?: number
   date?: string
   cover?: string
-  images?: ProjectImage[]
+  images?: (ProjectImage | ManifestGroup)[]
 }
 
 const manifests = import.meta.glob<ProjectManifest>(
@@ -73,28 +88,57 @@ function resolveSrc(folder: Folder, filename: string): string {
   return folder.images.get(basename(filename)) ?? ''
 }
 
+export function isImageGroup(item: GalleryItem): item is ImageGroup {
+  return Array.isArray((item as ImageGroup).images)
+}
+
+function isManifestGroup(
+  item: ProjectImage | ManifestGroup,
+): item is ManifestGroup {
+  return Array.isArray((item as ManifestGroup).group)
+}
+
+function resolveImage(
+  folder: Folder,
+  image: ProjectImage,
+): ProjectImage {
+  return {
+    src: resolveSrc(folder, image.src),
+    caption: image.caption,
+    date: image.date,
+  }
+}
+
 function resolveImages(
   folder: Folder,
   cover?: string,
-  manifestImages?: ProjectImage[],
-): { images: ProjectImage[]; cover: string } {
-  const images = manifestImages
-    ? manifestImages.map((image) => ({
-        src: resolveSrc(folder, image.src),
-        caption: image.caption,
-        date: image.date,
-      }))
+  manifestImages?: ProjectManifest['images'],
+): { images: ProjectImage[]; gallery: GalleryItem[]; cover: string } {
+  const gallery: GalleryItem[] = manifestImages
+    ? manifestImages.map((item) =>
+        isManifestGroup(item)
+          ? {
+              images: item.group.map((image) => resolveImage(folder, image)),
+              caption: item.caption,
+              date: item.date,
+            }
+          : resolveImage(folder, item),
+      )
     : [...folder.images.keys()]
         .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
         .map((filename) => ({ src: folder.images.get(filename) as string }))
 
+  const images = gallery.flatMap((item) =>
+    isImageGroup(item) ? item.images : [item],
+  )
+
   const coverSrc = cover ? resolveSrc(folder, cover) : images[0]?.src
-  return { images, cover: coverSrc ?? '' }
+  return { images, gallery, cover: coverSrc ?? '' }
 }
 
 function buildProject(folder: Folder): Project {
   const { manifest } = folder
-  const { images: resolvedImages, cover } = resolveImages(
+  const { images, gallery, cover } = resolveImages(
     folder,
     manifest.cover,
     manifest.images,
@@ -110,7 +154,8 @@ function buildProject(folder: Folder): Project {
     description: manifest.description ?? [],
     date: manifest.date,
     cover,
-    images: resolvedImages,
+    images,
+    gallery,
   }
 }
 
