@@ -34,7 +34,7 @@ const site = {
   name: 'Manon Arteta',
   role: 'Graphiste & Direction artistique',
   location: undefined as string | undefined,
-  email: undefined as string | undefined,//'manon.arteta@gmail.com',
+  email: undefined as string | undefined,
   emailHref: 'mailto:manon.arteta@gmail.com?subject=Demande%20de%20contact',
   socials: [
     { label: 'LinkedIn', href: 'https://linkedin.com/in/manon-arteta' },
@@ -79,20 +79,15 @@ const site = {
   ] as Stat[],
   testimonials: [
     {
-      quote: 'Manon a su donner une vraie cohérence à notre identité, du print au digital.',
-      name: 'Équipe OXYPHARM',
-      role: 'Entreprise d’alternance',
+      quote: 'Si vous cherchez une graphiste créative, motivée et super agréable à côtoyer, je vous recommande vivement Manon, toujours pleine d’idées, à l’écoute, réactive et avec un vrai sens du détail et toujours avec le sourire.',
+      name: 'Salomé ETHEVE',
+      role: 'Équipe OXYPHARM',
     },
     {
-      quote: 'Une graphiste à l’écoute, créative et toujours force de proposition.',
-      name: 'Enseignants LISAA',
-      role: 'École de design',
-    },
-    {
-      quote: 'Le souci du détail et la qualité de ses propositions font la différence.',
-      name: 'MasterPharm',
-      role: 'Client print',
-    },
+      quote: 'Manon possède un véritable œil artistique, qu’elle met au service de projets variés avec une grande justesse. Elle sait allier esthétique et efficacité, tout en restant à l’écoute des besoins du client ou de l’équipe.',
+      name: 'Raphaël LEMEYEUR',
+      role: 'Équipe OXYPHARM',
+    }
   ] as Testimonial[],
 }
 
