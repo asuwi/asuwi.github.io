@@ -4,7 +4,7 @@ import site from '../data/site.ts'
 import { cn } from './cn.ts'
 import Container from './Container.tsx'
 import ScrollToTop from './ScrollToTop.tsx'
-import { Sparkle } from './Decorative.tsx'
+// import { Sparkle } from './Decorative.tsx'
 import { CloseIcon, MenuIcon } from './Icons.tsx'
 
 const navLinks = [
@@ -37,7 +37,7 @@ function Layout() {
             onClick={() => setMenuOpen(false)}
           >
             {site.name}
-            <Sparkle className="h-4 w-4 text-accent" />
+            {/* <Sparkle className="h-4 w-4 text-accent" /> */}
           </NavLink>
 
           <nav className="hidden items-center gap-4 xl:flex xl:gap-6">
