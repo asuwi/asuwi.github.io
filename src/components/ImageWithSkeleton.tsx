@@ -42,7 +42,7 @@ function ImageWithSkeleton({
         <img
           className={cn(
             className,
-            'transition-[opacity,transform] duration-500 ease-out',
+            'transition-[opacity,scale] duration-300 ease-out',
             loading ? 'absolute inset-0 h-full w-full opacity-0' : 'opacity-100',
           )}
           src={src}
