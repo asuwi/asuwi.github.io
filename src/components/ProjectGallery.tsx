@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { isImageGroup } from '../data/projects.ts'
+import { isEmbed, isImageGroup } from '../data/projects.ts'
 import type { GalleryItem, ProjectImage } from '../data/projects.ts'
 import ImageWithSkeleton from './ImageWithSkeleton.tsx'
 import Lightbox from './Lightbox.tsx'
@@ -23,7 +23,7 @@ function ProjectGallery({ gallery, images, title }: ProjectGalleryProps) {
     const result: { item: GalleryItem; startIndex: number }[] = []
     gallery.reduce((offset, item) => {
       result.push({ item, startIndex: offset })
-      return offset + (isImageGroup(item) ? item.images.length : 1)
+      return offset + (isImageGroup(item) ? item.images.length : isEmbed(item) ? 0 : 1)
     }, 0)
     return result
   }, [gallery])
@@ -42,6 +42,30 @@ function ProjectGallery({ gallery, images, title }: ProjectGalleryProps) {
     <>
       <div className="columns-1 gap-6 sm:columns-2 lg:columns-3 [&>*]:mb-6">
         {indexed.map(({ item, startIndex }) => {
+          if (isEmbed(item)) {
+            return (
+              <figure
+                key={item.url}
+                className="mt-6 break-inside-avoid overflow-hidden rounded-[var(--radius-card)] border border-border bg-surface [column-span:all]"
+              >
+                <iframe
+                  src={item.url}
+                  title={item.caption ?? 'Site intégré'}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  className="aspect-video w-full bg-surface"
+                />
+                {item.caption || item.date ? (
+                  <figcaption className="flex items-baseline justify-between gap-3 px-4 py-3 text-[13px] leading-snug text-muted">
+                    <span>{item.caption}</span>
+                    {item.date ? <span className="shrink-0">{item.date}</span> : null}
+                  </figcaption>
+                ) : null}
+              </figure>
+            )
+          }
+
           if (isImageGroup(item)) {
             return (
               <figure

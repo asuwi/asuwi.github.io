@@ -14,7 +14,14 @@ export interface ImageGroup {
   date?: string
 }
 
-export type GalleryItem = ProjectImage | ImageGroup
+export interface ProjectEmbed {
+  url: string
+  caption?: string
+  date?: string
+  ratio?: string
+}
+
+export type GalleryItem = ProjectImage | ImageGroup | ProjectEmbed
 
 export interface Project {
   slug: string
@@ -46,7 +53,7 @@ interface ProjectManifest {
   order?: number
   date?: string
   cover?: string
-  images?: (ProjectImage | ManifestGroup)[]
+  images?: (ProjectImage | ManifestGroup | ProjectEmbed)[]
 }
 
 const manifests = import.meta.glob<ProjectManifest>(
@@ -92,10 +99,20 @@ export function isImageGroup(item: GalleryItem): item is ImageGroup {
   return Array.isArray((item as ImageGroup).images)
 }
 
+export function isEmbed(item: GalleryItem): item is ProjectEmbed {
+  return 'url' in item
+}
+
 function isManifestGroup(
-  item: ProjectImage | ManifestGroup,
+  item: ProjectImage | ManifestGroup | ProjectEmbed,
 ): item is ManifestGroup {
   return Array.isArray((item as ManifestGroup).group)
+}
+
+function isManifestEmbed(
+  item: ProjectImage | ManifestGroup | ProjectEmbed,
+): item is ProjectEmbed {
+  return 'url' in item
 }
 
 function resolveImage(
@@ -115,22 +132,26 @@ function resolveImages(
   manifestImages?: ProjectManifest['images'],
 ): { images: ProjectImage[]; gallery: GalleryItem[]; cover: string } {
   const gallery: GalleryItem[] = manifestImages
-    ? manifestImages.map((item) =>
-        isManifestGroup(item)
-          ? {
-              images: item.group.map((image) => resolveImage(folder, image)),
-              caption: item.caption,
-              date: item.date,
-            }
-          : resolveImage(folder, item),
-      )
+    ? manifestImages.map((item) => {
+        if (isManifestGroup(item)) {
+          return {
+            images: item.group.map((image) => resolveImage(folder, image)),
+            caption: item.caption,
+            date: item.date,
+          }
+        }
+        if (isManifestEmbed(item)) return item
+        return resolveImage(folder, item)
+      })
     : [...folder.images.keys()]
         .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
         .map((filename) => ({ src: folder.images.get(filename) as string }))
 
-  const images = gallery.flatMap((item) =>
-    isImageGroup(item) ? item.images : [item],
-  )
+  const images = gallery.flatMap((item) => {
+    if (isImageGroup(item)) return item.images
+    if (isEmbed(item)) return []
+    return [item]
+  })
 
   const coverSrc = cover ? resolveSrc(folder, cover) : images[0]?.src
   return { images, gallery, cover: coverSrc ?? '' }
