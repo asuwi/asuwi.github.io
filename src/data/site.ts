@@ -32,7 +32,7 @@ export interface Testimonial {
 
 const site = {
   name: 'Manon Arteta',
-  role: 'Graphiste & Direction artistique',
+  role: '',
   location: undefined as string | undefined,
   email: undefined as string | undefined,
   emailHref: 'mailto:manon.arteta@gmail.com?subject=Demande%20de%20contact',
