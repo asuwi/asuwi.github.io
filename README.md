@@ -28,6 +28,26 @@ Chaque projet est un dossier dans `src/projets/<slug>/` contenant :
 
 Les champs `caption` et `date` d'une image sont optionnels. Le nom du dossier devient l'URL du projet (`/projets/<slug>`). Il suffit de déposer le dossier et ses images : la page est générée automatiquement au build.
 
+### Regrouper des images
+
+Pour afficher plusieurs images « collées » ensemble dans une même tuile de la mosaïque, déclarez un objet `group` à la place d'une image :
+
+```jsonc
+"images": [
+  { "src": "01-logo.jpg", "caption": "Le logo" },
+  {
+    "group": [
+      { "src": "02-recto.jpg", "caption": "Recto" },
+      { "src": "03-verso.jpg", "caption": "Verso" }
+    ],
+    "caption": "La carte de visite"
+  },
+  { "src": "04-affiche.jpg", "caption": "L'affiche" }
+]
+```
+
+Les images d'un groupe s'affichent côte à côte (2 → 2 colonnes, 3 → 3 colonnes, 4 et plus → grille 2×2). Chaque image reste cliquable individuellement dans la visionneuse. Les champs `caption` et `date` du groupe (optionnels) s'affichent sous la tuile.
+
 ---
 
 ## React + TypeScript + Vite
