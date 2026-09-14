@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout.tsx'
 import About from './pages/About.tsx'
+import Cv from './pages/Cv.tsx'
 import Home from './pages/Home.tsx'
 import Project from './pages/Project.tsx'
 import Projets from './pages/Projets.tsx'
@@ -8,6 +9,7 @@ import Projets from './pages/Projets.tsx'
 function App() {
   return (
     <Routes>
+      <Route path="cv-html" element={<Cv />} />
       <Route element={<Layout />}>
         <Route index element={<Home />} />
         <Route

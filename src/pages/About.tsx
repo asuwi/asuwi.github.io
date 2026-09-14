@@ -23,7 +23,7 @@ import BrandIcon from '../components/BrandIcons.tsx'
 import type { BrandName } from '../data/brandIcons.ts'
 import { cn } from '../components/cn.ts'
 import { optimizedAsset } from '../data/optimizedImages.ts'
-import cvPdf from '../assets/cv.pdf'
+import cvPdf from '../assets/cv-ats.pdf'
 
 const paragraphs = [
   "Je suis Manon Arteta, graphiste diplômée d'une licence en design graphique et actuellement à la recherche d'une alternance pour mon Master Direction Artistique Communication 360 à LISAA Paris.",

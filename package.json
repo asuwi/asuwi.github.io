@@ -7,6 +7,7 @@
     "dev": "bun run images:optimize && vite",
     "build": "bun run images:optimize && tsc -b && vite build",
     "images:optimize": "bun scripts/optimize-images.ts",
+    "cv": "bun scripts/generate-cv.ts",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "bun run build && git add docs && git commit -m \"deploy\" && git push"
@@ -20,6 +21,7 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@types/bun": "^1.4.2",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
