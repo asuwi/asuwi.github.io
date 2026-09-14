@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import { cv } from '../data/cv.ts'
 import type { Education, Experience, SkillGroup } from '../data/cv.ts'
 import { cn } from '../components/cn.ts'
-import portrait from '../assets/portrait.png'
+import portrait from '../assets/portrait2.png'
 
 const PAGE_HEIGHT_MM = 281
 
