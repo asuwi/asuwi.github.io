@@ -139,7 +139,7 @@ export const cv: Cv = {
     },
     {
       category: 'Direction artistique',
-      items: ['Identité visuelle', 'Concept', 'Storytelling', 'Stratégie de marque'],
+      items: ['Identité visuelle', 'Concept', 'Storytelling', 'Typographie', 'Stratégie de marque'],
     },
     {
       category: 'Réseaux sociaux',
@@ -154,5 +154,5 @@ export const cv: Cv = {
     { name: 'Français', level: 'Langue maternelle' },
     { name: 'Anglais', level: 'Compréhension écrite et orale, expression écrite' },
   ],
-  interests: ['Art', 'Design', 'Photographie', 'Voyages', 'Cinéma'],
+  interests: ["Animaux de compagnie", 'Art', 'Cinéma', 'Design', "Musique", 'Photographie', 'Voyages'],
 }

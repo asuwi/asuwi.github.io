@@ -10,8 +10,8 @@ const PAGE_HEIGHT_MM = 281
 const HEADING_CLASS =
   'text-accent mt-[12pt] mb-[5pt] break-after-avoid border-b border-[#999] pb-[2pt] text-[11pt] font-bold uppercase tracking-[0.04em]'
 const ENTRY_CLASS = 'mb-[8pt] break-inside-avoid'
-const ENTRY_TITLE_CLASS = 'text-[10.5pt] font-bold'
-const ENTRY_COMPANY_CLASS = 'text-[10.5pt] font-bold text-[#555]'
+const ENTRY_TITLE_CLASS = 'text-[10.5pt] font-bold text-[#555]'
+const ENTRY_COMPANY_CLASS = 'text-[10.5pt] font-bold'
 const META_CLASS = 'mt-[1pt] text-[9.5pt] text-[#555]'
 
 function dateRange(start: string, end?: string): string {
@@ -84,8 +84,8 @@ function SkillGroupItem({ group }: { group: SkillGroup }) {
   return (
     <div className={ENTRY_CLASS}>
       <div className="flex items-baseline gap-[6pt]">
-        <h3 className={ENTRY_TITLE_CLASS}>{group.category}</h3>
-        <p>{group.items.join(', ')}</p>
+        <h3 className={ENTRY_COMPANY_CLASS}>{group.category}</h3>
+        <p className={ENTRY_CLASS + " mb-0!"}>{group.items.join(', ')}</p>
       </div>
     </div>
   )
@@ -98,8 +98,8 @@ function ContactLink({ href, children }: { href: string; children: ReactNode }) 
 function LanguageEntry({ name, level }: { name: string; level: string }) {
   return (
     <span className="break-inside-avoid">
-      <span className="font-bold">{name}</span>
-      <span className="text-[#555]"> ({level})</span>
+      <span className={ENTRY_COMPANY_CLASS}>{name}</span>
+      <span className={ENTRY_CLASS}> ({level})</span>
     </span>
   )
 }
@@ -182,7 +182,7 @@ function Cv() {
       <img
         src={portrait}
         alt={`Photo de ${cv.name}`}
-        className="mt-[2pt] h-[37mm] w-[37mm] shrink-0 rounded-full object-cover"
+        className="mt-[2pt] h-[37mm] w-[37mm] shrink-0 rounded-full object-cover border-2 border-dotted border-accent p-[0px]"
       />
       <div className="min-w-0 flex-1">
         <div className="flex items-baseline justify-between border-b border-[#999] pb-[4pt]">
