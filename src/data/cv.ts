@@ -56,8 +56,8 @@ export const cv: Cv = {
       title: 'Graphiste - Alternance',
       company: 'OXYPHARM',
       location: 'Montpellier',
-      start: '2023',
-      end: '2025',
+      start: '2024',
+      end: '2026',
       bullets: [
         "Création de l'identité visuelle (logo, palette, typographies, déclinaison) suite à la fusion Pharmat / Oxypharm",
         'Conception de la fresque murale du siège principal',
@@ -70,8 +70,8 @@ export const cv: Cv = {
       title: 'Graphiste - Stage',
       company: 'Mairie de Meudon',
       location: 'Meudon',
-      start: '2023',
-      end: '2023',
+      start: '2022',
+      end: '2022',
       months: 2,
       bullets: [
         "Réalisation d'un roll-up et d'une affiche pour l'exposition Maria Papa",
@@ -82,8 +82,8 @@ export const cv: Cv = {
       title: 'Graphiste - Stage',
       company: 'Projet Cartylion',
       location: 'Meudon',
-      start: '2023',
-      end: '2023',
+      start: '2022',
+      end: '2022',
       months: 1,
       bullets: [
         "Infographie et Community management pour la marque de jeux de société Cartylion",
@@ -123,7 +123,7 @@ export const cv: Cv = {
   skills: [
     {
       category: 'Design & illustration',
-      items: ['Suite Adobe (Photoshop, Illustrator)', 'Procreate', 'Illustration', 'Character design'],
+      items: ['Photoshop', 'Illustrator', 'Procreate', 'Illustration', 'Character design'],
     },
     {
       category: 'Maquette & édition',
@@ -135,7 +135,7 @@ export const cv: Cv = {
     },
     {
       category: 'Vidéo & motion',
-      items: ['Suite Adobe (After Effects, Premiere Pro)', 'CapCut', 'Motion design'],
+      items: ['After Effects', 'Premiere Pro', 'CapCut', 'Motion design'],
     },
     {
       category: 'Direction artistique',
@@ -147,7 +147,7 @@ export const cv: Cv = {
     },
     {
       category: 'Bureautique',
-      items: ['Suite Office (Word, Excel, PowerPoint)'],
+      items: ['Word', 'Excel', 'PowerPoint'],
     },
   ],
   languages: [
