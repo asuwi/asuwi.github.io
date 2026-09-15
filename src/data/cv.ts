@@ -81,9 +81,9 @@ export const cv: Cv = {
     {
       title: 'Graphiste - Stage',
       company: 'Projet Cartylion',
-      location: 'Meudon',
-      start: '2022',
-      end: '2022',
+      location: 'Aubervilliers',
+      start: '2021',
+      end: '2021',
       months: 1,
       bullets: [
         "Infographie et Community management pour la marque de jeux de société Cartylion",
@@ -131,7 +131,7 @@ export const cv: Cv = {
     },
     {
       category: 'Web & UI/UX',
-      items: ['Figma', 'Framer', 'HTML5', 'CSS3', 'Stripo', 'Création de maquettes'],
+      items: ['Figma', 'Framer', 'HTML5', 'CSS3', 'Stripo', 'Intelligence artificielle', 'Création de maquettes'],
     },
     {
       category: 'Vidéo & motion',
