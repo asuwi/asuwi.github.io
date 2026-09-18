@@ -23,7 +23,8 @@ import BrandIcon from '../components/BrandIcons.tsx'
 import type { BrandName } from '../data/brandIcons.ts'
 import { cn } from '../components/cn.ts'
 import { optimizedAsset } from '../data/optimizedImages.ts'
-import cvPdf from '../assets/cv-ats.pdf'
+import cvPdf from '../assets/cv2.pdf'
+import cvAtsPdf from '../assets/cv-ats.pdf'
 
 const paragraphs = [
   "Je suis Manon Arteta, graphiste diplômée d'une licence en design graphique et actuellement à la recherche d'une alternance pour mon Master Direction Artistique Communication 360 à LISAA Paris.",
@@ -176,14 +177,26 @@ function About() {
               ]}
             />
 
-            <a
-              href={cvPdf}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-surface transition-colors hover:bg-accent-deep"
-            >
-              Voir mon CV →
-            </a>
+            <div className="mt-8 flex flex-col items-start gap-3">
+              <div className="flex flex-col justify-center gap-2">
+                <a
+                  href={cvPdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-surface transition-colors hover:bg-accent-deep"
+                >
+                  Voir mon CV →
+                </a>
+                <a
+                  href={cvAtsPdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-center text-xs text-muted underline underline-offset-4 transition-colors hover:text-accent"
+                >
+                  version non stylisée
+                </a>
+              </div>
+            </div>
           </div>
 
           {characterSrc ? (
