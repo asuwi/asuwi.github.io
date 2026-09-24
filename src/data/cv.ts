@@ -48,7 +48,7 @@ export const cv: Cv = {
   name: 'Manon ARTETA',
   title: 'Graphiste & Direction artistique',
   summary:
-    "Graphiste en alternance depuis 2 ans, actuellement en Mastère Direction Artistique à LISAA Paris.\nAutonome et proactive, je conçois des supports de communication clairs et engageants et souhaite aujourd’hui mettre ma créativité au service de projets humains et inclusifs.",
+    "Graphiste diplômée d'une licence en design graphique. À la recherche d'une alternance afin de poursuivre mes études en Master Direction Artistique Communication 360 à LISAA Paris.\n Autonome, créative et polyvalente, je maîtrise la suite Adobe ainsi que Figma, Framer, la vidéo et la création de contenus.",
   email: 'manon.arteta@gmail.com',
   website: 'https://manonart.fr',
   experiences: [
